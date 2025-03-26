@@ -1,0 +1,85 @@
+---
+import Section from "./Section.astro";
+const { relativeClass = "" } = Astro.props;
+---
+
+<Section class={`${relativeClass}`}>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="py-6 md:py-10">
+
+            <!-- Testimonials container -->
+            <article class="text-lg text-slate-500" data-aos-id-testimonials="">
+
+                <p class="mb-6 text-xl font-semibold text-blue-600">
+                    The most valuable commodity in life and business today is <strong>TIME</strong>.
+                </p>
+                
+                <p class="mb-6">
+                    Time lost can never be regained. So why do <strong>Recruitment Consultants</strong> and 
+                    <strong>HR Professionals</strong> waste hours reviewing unsuitable CVs?  
+                    Let’s be honest—**the “best CVs” don’t always mean the “best candidates.”**
+                </p>
+                
+                <p class="mb-6 text-lg font-semibold text-slate-800">
+                    That changes now...
+                </p>
+
+                <p class="mb-6">
+                    <strong>YourCVVideo.com Ltd</strong> is a revolutionary 
+                    <span class="text-blue-600 font-semibold">SaaS platform</span> designed for 
+                    <strong>Recruitment Agencies</strong> and <strong>Hiring Companies</strong>.  
+                    Our <span class="text-blue-600 font-semibold">AI-powered pre-screening tool</span> 
+                    saves recruiters <strong>2-3 hours per day</strong>, streamlining the hiring process 
+                    by eliminating time spent on unqualified CVs.
+                </p>
+
+                <p class="mb-6">
+                    <strong>Say goodbye to traditional written CVs</strong>—our cutting-edge platform introduces  
+                    <span class="text-blue-600 font-semibold">video applications</span>, allowing candidates to 
+                    showcase their skills and personality in a dynamic way.
+                </p>
+
+                <p class="mb-6">
+                    Our unique value lies in <strong>Human Intelligence + Artificial Intelligence</strong>,  
+                    leveraging video functionality to enhance personal connections in recruitment.
+                </p>
+
+                <p class="mb-6">
+                    <strong>For Recruiters:</strong> Quickly view and assess candidates, focusing only on 
+                    those with the right skills.
+                </p>
+
+                <p class="mb-6">
+                    <strong>For Candidates:</strong> Get noticed faster, demonstrate skills effectively, and 
+                    increase job success rates with **CVVideos**.
+                </p>
+
+                <p class="mb-6">
+                    YourCVVideo is available for recruiters in  
+                    <strong>UK, South Africa, Australia, New Zealand, India, Pakistan, Singapore, Hong Kong, UAE, 
+                    and 23 European countries.</strong>
+                </p>
+
+                <p class="text-lg font-semibold text-blue-600">
+                    Join the Recruitment Revolution Today!
+                </p>
+
+            </article>
+
+            <!-- Call-to-Action Button -->
+            <div class="text-center mt-8">
+                <button 
+                    class="btn text-white bg-blue-600 hover:bg-blue-700 group transition-all duration-200 ease-in-out"
+                    aria-label="Browse latest jobs">
+                    Browse Latest Jobs 
+                    <span class="tracking-normal text-blue-300 group-hover:translate-x-0.5 
+                        transition-transform duration-150 ease-in-out ml-1">
+                        →
+                    </span>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</Section>

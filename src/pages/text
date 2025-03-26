@@ -1,0 +1,82 @@
+<section class="bg-gray-50 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-extrabold text-blue-600 sm:text-4xl">
+                📌 Recruit Smarter with Video Pre-Screening
+            </h2>
+            <p class="mt-4 text-lg text-gray-600">
+                Reduce hiring time and eliminate unsuitable CVs with our AI-powered recruitment platform.
+            </p>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Feature Item -->
+            <div class="p-6 bg-white rounded-xl shadow-md">
+                <h3 class="text-xl font-semibold text-gray-800">🎥 AI-Powered Pre-Screening</h3>
+                <p class="mt-2 text-gray-600">
+                    Instantly filter out unqualified candidates, saving hours of manual review.
+                </p>
+            </div>
+
+            <div class="p-6 bg-white rounded-xl shadow-md">
+                <h3 class="text-xl font-semibold text-gray-800">📌 Unlimited Job Postings</h3>
+                <p class="mt-2 text-gray-600">
+                    Post as many jobs as you like! Each listing stays active for 30 days.
+                </p>
+            </div>
+
+            <div class="p-6 bg-white rounded-xl shadow-md">
+                <h3 class="text-xl font-semibold text-gray-800">📩 Unlimited Video Applications</h3>
+                <p class="mt-2 text-gray-600">
+                    Candidates submit video responses, helping you assess personality & skills instantly.
+                </p>
+            </div>
+
+            <div class="p-6 bg-white rounded-xl shadow-md">
+                <h3 class="text-xl font-semibold text-gray-800">🔎 Advanced Candidate Search</h3>
+                <p class="mt-2 text-gray-600">
+                    Browse and filter through CVVideos to find the perfect match.
+                </p>
+            </div>
+
+            <div class="p-6 bg-white rounded-xl shadow-md">
+                <h3 class="text-xl font-semibold text-gray-800">📅 Seamless Interview Scheduling</h3>
+                <p class="mt-2 text-gray-600">
+                    Candidates book **video or face-to-face interviews** via the YCVV Online Diary System.
+                </p>
+            </div>
+
+            <div class="p-6 bg-white rounded-xl shadow-md">
+                <h3 class="text-xl font-semibold text-gray-800">📽️ Recorded Video Interviews</h3>
+                <p class="mt-2 text-gray-600">
+                    Review candidate interviews anytime or share them with hiring managers.
+                </p>
+            </div>
+
+            <div class="p-6 bg-white rounded-xl shadow-md">
+                <h3 class="text-xl font-semibold text-gray-800">🔐 Candidate Ownership Protection</h3>
+                <p class="mt-2 text-gray-600">
+                    Secure exclusivity or permission before submitting a CV, avoiding disputes.
+                </p>
+            </div>
+
+            <div class="p-6 bg-white rounded-xl shadow-md">
+                <h3 class="text-xl font-semibold text-gray-800">📊 Candidate Tracking System</h3>
+                <p class="mt-2 text-gray-600">
+                    Track recruitment progress from pre-screening to job offer seamlessly.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- CTA Button -->
+        <div class="text-center mt-10">
+            <button class="btn text-white bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold text-lg">
+                Start Hiring Smarter Today →
+            </button>
+        </div>
+
+    </div>
+</section>
