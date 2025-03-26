@@ -1,0 +1,20 @@
+---
+import TextBox from "../Form/TextBox.astro";
+import Button from "../Form/Button.astro";
+import ErrorMessage from "../Error/ErrorMessage.astro";
+
+const email = "";
+const password = "";
+const errorMessage = "";
+---
+
+<form class="max-w-md mx-auto bg-white p-6 shadow-lg rounded-lg">
+  <h2 class="text-xl font-bold mb-4">Sign In</h2>
+
+  <TextBox label="Email" type="email" placeholder="Enter your email" required={true} value={email} />
+  <TextBox label="Password" type="password" placeholder="Enter your password" required={true} value={password} />
+  
+  <ErrorMessage message={errorMessage} />
+
+  <Button label="Sign In" type="submit" variant="primary" />
+</form>

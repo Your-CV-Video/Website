@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Section/Hero.astro";
+import Target from "../components/Section/Target.astro";
+import PricingSec from "../components/Section/Pricing.astro";
+import CtaSec from "../components/Section/Cta.astro";
+import FeatureBlock from "../components/Section/Features/Block.astro";
+import Feature1 from "../components/Section/Features/1.astro";
+import Feature2 from "../components/Section/Features/2.astro";
+import Feature3 from "../components/Section/Features/3.astro";
+
+
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+	<!--Hero -->
+	<Hero class="relative"/>
+	<!-- Features blocks -->
+	<FeatureBlock class="relative"/>
+
+	<!-- Features 01 -->
+	 <Feature1 class="relative"/>
+	<!-- Features 02 -->
+	<Feature2 />
+
+	<!-- Features 03 -->
+	<Feature3 class="relative"/>
+
+	<!-- Target -->
+	 <Target />
+	 
+	<!-- Pricing -->
+	<PricingSec 
+	relativeClass="relative" 
+  	backgroupClass="h-1/3 lg:h-2/3"/>
+	<!-- Cta -->
+	
+	
+	<CtaSec relativeClass="bg-slate-100" headerColorClass="text-slate-800" paraColorClass="text-slate-500" />
+
+</Layout>

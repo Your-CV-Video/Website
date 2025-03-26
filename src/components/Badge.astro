@@ -1,0 +1,6 @@
+---
+const { highlight=true,label='Badge Label here',positionClass='top-0 right-0 mr-6 -mt-4' } = Astro.props;
+---
+{highlight && (<div class={`absolute ${positionClass}`}>
+    <div class="inline-flex text-sm font-semibold py-1 px-3 text-emerald-700 bg-emerald-200 rounded-full">{label}</div>
+</div> )}

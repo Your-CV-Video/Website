@@ -1,0 +1,19 @@
+---
+import PriceInfo from './PriceInfo.astro';
+import FeatureSec from './Feature.astro';
+import Badge from '../../Badge.astro';
+const { planName, moPrice,cur,dur, features, highlight,planInfo,annualLabel,annualPrice } = Astro.props;
+---
+
+<div class="relative flex flex-col h-full px-6 py-5 bg-white shadow-lg" data-aos="fade-up">
+    <Badge highlight={highlight} label="Most Popular" />
+  
+    <PriceInfo planName={planName} planInfo={planInfo} price={moPrice} annualPrice={annualPrice} annualLabel={annualLabel} cur={cur} dur={dur}/>
+    <div class="font-medium mb-3">Features include:</div>
+    <FeatureSec features={features}/>
+    <div class="p-3 rounded-sm bg-slate-50">
+        <a class="btn-sm text-white bg-blue-600 hover:bg-blue-700 w-full group" href="#0">
+            Buy it Now <span class="tracking-normal text-blue-300 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+        </a>
+    </div>
+</div>

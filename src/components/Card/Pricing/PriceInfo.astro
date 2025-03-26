@@ -1,0 +1,15 @@
+---
+import AmountSec from "./Amount.astro";
+const { planName,planInfo, price,cur,dur,annualLabel,annualPrice } = Astro.props;
+---
+
+
+<div class="mb-4 pb-4 border-b border-slate-200">
+    <div class="text-lg font-semibold text-slate-800 mb-1">{planName}</div>
+  
+    <AmountSec price={price} cur={cur} dur={dur} annualLabel={annualLabel} annualPrice={annualPrice} />
+    <div class="text-slate-500" set:html={planInfo}> </div>
+   
+</div>
+
+

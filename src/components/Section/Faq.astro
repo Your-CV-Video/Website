@@ -1,0 +1,79 @@
+---
+import Section from "./Section.astro";
+import DarkBg from '../Darkbg.astro';
+const { class: relativeClass="" } = Astro.props;
+import StartupPromo from "../Section/StartupPromo.astro";
+const faqQuestions = [
+                    { 
+                        question: "What is YourCVVideo.com?", 
+                        answer: "YourCVVideo.com Ltd is a SaaS for Recruiters (Recruitment Agencies/Hiring Companies) to assist them in saving time on their Recruitment process (2-3 hours per day). YourCVVideo is redefining recruitment with our All-In-One cutting-edge pre-screening application and Video solution. Our USP is the Video functionality for Recruiters and Candidates, to make it more of a personal experience using Human Intelligence alongside Artificial Intelligence."
+                    },
+                    { 
+                        question: "How does the video technology work?", 
+                        answer: "Candidates can create CVVideo’s to showcase their skills and personality, allowing Recruiters to gain a deeper understanding of potential hires beyond traditional CV’s/Resumes."
+                    },
+                    { 
+                        question: "Why should I join during the MVP stage?", 
+                        answer: "Joining during the MVP stage will offer you early access to our unique features. You'll have the opportunity to provide feedback and influence the platform's development while enjoying the benefits of our services before fees apply."
+                    },
+                    { 
+                        question: "Are there any fees during the MVP stage?", 
+                        answer: "No, there are no fees for the first 14 days. After this period, standard fees will apply, but you can experience the platform risk-free initially."
+                    },
+                    { 
+                        question: "Who can benefit from YourCVVideo.com?", 
+                        answer: "Both Recruiters and Candidates can benefit. Recruiters can access a diverse talent pool with CVVideos, while Candidates can stand out with engaging video presentations of their skills and qualifications."
+                    },
+                    { 
+                        question: "How can I get started?", 
+                        answer: "Simply sign up to be kept informed of the progress and launch date and to be one of the early users of the site, which will give you the opportunity to win a holiday for you and 3 friends/colleagues. The first 1000 paying Users will go into a draw and the Winner and 3 Friends get to spend 7 nights in a 5-Star Luxury Safari Hotel in South Africa between September to December 2025."
+                    },
+                    { 
+                        question: "What makes YourCVVideo.com different from other Recruitment SaaS?", 
+                        answer: "YourCVVideo is a business that has identified the real pain points experienced by Recruiters and Candidates in the Recruitment process. With 26 years of experience, we have recognized market opportunities for rapid growth and expansion. Most recruitment software these days are proceeding down the AI route, but Recruitment is an interaction between humans. AI can assist in sorting Candidates based on written CVs, but even the most sophisticated software cannot replace Human Intuition—the gut feeling a professional Recruiter has for the right Candidate."
+                    },
+                    { 
+                        question: "Can I provide feedback on the platform?", 
+                        answer: "Absolutely! We welcome feedback from all users to help us improve the platform and tailor it to the needs of our community."
+                    },
+                    { 
+                        question: "How can I contact support if I have questions?", 
+                        answer: "You can reach our support team through the contact form, and we’ll get back to you as soon as possible."
+                    },
+                    { 
+                        question: "What types of jobs are available on YourCVVideo.com?", 
+                        answer: "We feature a wide range of job listings across various industries, catering to different skill levels and career paths."
+                    }
+                ];
+---
+
+<Section class={`${relativeClass}`}>
+    <StartupPromo class="relative"/>
+     
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="py-12 md:py-20 border-t border-slate-50">
+
+            <!-- Section header -->
+            <div class="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+                <h2 class="h2 font-playfair-display text-slate-800">Frequently Asked Questions</h2>
+            </div>
+
+            <!-- Faqs -->
+            <ul class="max-w-3xl mx-auto divide-y divide-slate-200">
+                {faqQuestions.map((faq) => (
+                    <li x-data="{ expanded: false }" >
+                        <button class="h4 font-playfair-display flex items-center justify-between w-full text-left py-5" @click="expanded = !expanded" :aria-expanded="expanded">
+                            <span>{faq.question}</span>
+                            <svg class="w-4 h-4 fill-current text-blue-600 shrink-0 ml-8" :class="{'rotate-180': expanded}" viewBox="0 0 16 16">
+                                <path d="m3 5 5 6 5-6z" />
+                            </svg>
+                        </button>
+                        <div x-ref="item" class="text-slate-500 overflow-hidden transition-all duration-300 ease-in-out" :style="expanded ? 'max-height: ' + $refs.item.scrollHeight + 'px; opacity: 1' : 'max-height: 0; opacity: 0'">
+                            <p class="pb-5">{faq.answer}</p>
+                        </div>
+                    </li>
+                ))}
+            </ul>
+        </div>
+    </div>
+</Section>
