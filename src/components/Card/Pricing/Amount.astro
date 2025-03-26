@@ -1,0 +1,14 @@
+---
+const { price,cur,dur,annualPrice,annualLabel } = Astro.props;
+---
+<div class="inline-flex items-baseline mb-3">
+    <span class="h3 font-medium text-slate-500">{cur}</span>
+    <!-- <span x-text="annual ? `${annualPrice} ${annualLabel}` : `{price} ${dur}`" class="h2 leading-7 font-playfair-display text-slate-800"></span> -->
+    <span x-text="annual ? '750.00' : '74.99'" 
+    class="h2 leading-7 font-playfair-display text-slate-800">
+</span>
+    <span class="font-medium text-slate-400"  x-text="annual ? 'Annum / User (Exc. VAT)' : 'mo / user (Exc. VAT)'" ></span>
+</div>
+
+
+

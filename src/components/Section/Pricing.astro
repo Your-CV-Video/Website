@@ -1,0 +1,85 @@
+---
+import Section from "./Section.astro";
+import DarkBg from '../Darkbg.astro';
+import Darkbg from "../Darkbg.astro";
+import PricingCard from "../Card/Pricing/Pricing.astro";
+const { backgroupClass = "", relativeClass = "" } = Astro.props;
+const pricingPlans = [
+    {
+        planName: "Diamond Package",
+        planInfo: ` <span class="text-emerald-500 font-medium">Recruitment Really Re-Invented.</span> </br> But don't just take our word for it – Take our '14-day Free Trial' Today and see the benefits for yourself!`,
+        moPrice: 74.99,
+        cur: "£",
+        dur: "mo / user (Exc. VAT)",
+        features: [
+            "Video Function Pre-Screening Tool to cut down on the 1000’s of unsuitable CVs.",
+            "Unlimited Job Postings – Post as many jobs as you like (jobs valid for 30 days).",
+            "Unlimited Video Applications received from Candidates.",
+            "Unlimited searches for Candidates' CVVideos.",
+            "Candidates have access to Recruiters' YCVV Online Diary Management System to book Video or Face-to-Face Interviews with the Recruiter.",
+            "Recorded Video Interviews with Candidates for reference or to submit to the Client/Hiring Manager.",
+            "During the recorded interview, exclusivity can be gained from the Candidate or permission to send their CV to a Client, eliminating disputes over Candidate ownership.",
+            "Candidate Tracking System – Follow the recruitment process: pre-screening, recorded video interview, face-to-face interview, job offer, or rejection.",
+        ],
+        highlight: false,
+        annualPrice: 750.00, // Added annual price
+        annualLabel: "Annum / User (Exc. VAT)"
+    }
+];
+
+---
+
+
+<Section class={`${relativeClass}`}>
+     <!-- Dark background -->
+    <Darkbg class={`${backgroupClass}`}/>
+
+  
+
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="pt-32 md:pt-40">
+            <!-- Section header -->
+            <div class="max-w-3xl mx-auto text-center pb-12 pt-5">
+                <h2 class="h2 font-playfair-display text-slate-100">Pricing - All-In-One Solution – (Monthly/Annual Subscription)</h2>
+            </div>
+
+            
+
+            <!-- Pricing tables -->
+            <div x-data="{ annual: false }">
+
+                <!-- Pricing toggle -->
+                <div class="flex justify-center items-center space-x-4 sm:space-x-7 mb-16">
+                    <div class="text-sm text-slate-500 font-medium text-right min-w-[8rem]">Pay Monthly</div>
+                    <div class="form-switch shrink-0">
+                        <input type="checkbox" id="toggle" class="sr-only" x-model="annual" />
+                        <label class="bg-slate-700" for="toggle">
+                            <span aria-hidden="true"></span>
+                            <span class="sr-only">Pay annually</span>
+                        </label>
+                    </div>
+                    <div class="text-sm text-slate-500 font-medium min-w-[8rem]">Pay Yearly </div>
+                </div>
+
+                <div class="max-w-sm mx-auto grid gap-8 lg:grid-cols-12 lg:gap-12 items-start lg:max-w-none pt-4">
+
+                    <!-- Pricing table 1 -->
+
+                    {pricingPlans.map((plan) => (
+                        <PricingCard {...plan} />
+                    ))}
+                   
+                   
+                    <!-- Pricing table 2 -->
+                    
+
+                    <!-- Pricing table 3 -->
+                   
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</Section>

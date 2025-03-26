@@ -1,0 +1,44 @@
+---
+import Copyright from "./Copyright.astro"
+import SocialLink from './SocialLink.astro'
+import FNav from './FNav.astro'
+
+---
+<footer>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+        <!-- Top area: Blocks -->
+        <div class="grid sm:grid-cols-12 gap-8 py-8 md:py-12">
+
+            <!-- 1st block -->
+            <div class="sm:col-span-12 lg:col-span-4 lg:max-w-xs">
+                <div class="mb-2">
+                    <!-- Logo -->
+                    <a class="inline-flex text-blue-600 transition duration-150 ease-in-out" href="index.html" aria-label="Cruip">
+                       <img src="../../../public/images/sm-logo.png" style="max-width: 60px;" alt="">
+                    </a>
+                </div>
+                <div class="text-lg font-bold text-slate-800">Screening Made Simple, Hiring Made Easy</div>
+            </div>
+
+            <!-- nav -->
+             <FNav/>
+
+          
+
+        </div>
+
+        <!-- Bottom area -->
+        <div class="md:flex md:items-center md:justify-between py-6 md:py-8 border-t border-slate-200">
+
+            <!-- Social links -->
+             <SocialLink/>
+           
+
+            <!-- Copyrights note -->
+           <Copyright/>
+
+        </div>
+
+    </div>
+</footer>

@@ -1,0 +1,104 @@
+---
+import Logo from "./Logo.astro";
+import DesktopMenu from "./DesktopMenu.astro";
+import MobileMenu from "./MobileMenu.astro";
+
+
+const menus =[
+    {
+        label: "About us",
+        uri: "/about-us",
+        loc: "l",
+        hr: false,
+        subs: [],
+    },
+    {
+        label: "Recruiters",
+        uri: "/about-us",
+        loc: "l",
+        hr: false,
+        //  "Recruiter", "Pricing", "Request Free Demo", "Login / Register", ""
+        subs: [
+            {
+                label: "Recruiter",
+                uri: "/recruiter-more",
+            },
+            {
+                label: "Pricing",
+                uri: "/pricing",
+            },
+            {
+                label: "Request Free Demo",
+                uri: "/request-free-demo",
+            },
+            {
+                label: "Login / Register",
+                uri: "/login",
+            },
+            {
+                label: "My Dashboard",
+                uri: "/",
+            },
+        ],
+    },
+    {
+        label: "Candidates",
+        loc: "l",
+        uri: "/about-us",
+        hr: false,
+
+        subs: [
+            {
+                label: "Candidate",
+                uri: "/candidate",
+            },
+            {
+                label: "Featured Recruiters",
+                uri: "/featured-recruiters",
+            },
+            {
+                label: "Browse Jobs",
+                uri: "/browse-jobs",
+            },
+            {
+                label: "Login / Register",
+                uri: "/login",
+            },
+            {
+                label: "My Dashboard",
+                uri: "/",
+            },
+        ],
+    },
+    {
+        label: "Contact us",
+        loc: "l",
+        uri: "/contact-us",
+        hr: false,
+        subs: [],
+    },
+    {
+        label: "Login",
+        loc: "r",
+        uri: "/login",
+        hr: false,
+        subs: [],
+    },
+    {
+        label: `Register Now <span class="tracking-normal text-blue-600 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>`,
+        loc: "r",
+        uri: "/register",
+        hr: true,
+        subs: [],
+    },
+];
+// import MobileMenu from "./MobileMenu.astro";
+---
+
+<header class="absolute w-full z-30 bg-white">
+  <div class="max-w-6xl mx-auto px-5 sm:px-6 flex items-center justify-between h-16 md:h-20">
+    <Logo />
+    <DesktopMenu menus={menus}/>
+    <MobileMenu  menus={menus} />
+  </div>
+</header>
