@@ -1,0 +1,105 @@
+<form >
+          
+    <div class="space-y-5">
+        <!-- Title -->
+        <div class="space-y-3">
+            <div>
+                <label class="sr-only" for="title">Title</label>
+                <div class="relative">
+                    <select id="title" name="TITLE" class="form-select text-sm w-full">
+                        <option selected disabled hidden value="">Title</option>
+                        <option value="Mr">Mr</option>
+                        <option value="Ms">Ms</option>
+                        <option value="Miss">Miss</option>
+                        <option value="Mrs">Mrs</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- First and Last Name -->
+            <div class="flex flex-row gap-3">
+                <div class="flex-auto">
+                    <label class="sr-only" for="firstname">First Name</label>
+                    <div class="relative">
+                        <input id="firstname" name="FNAME" class="form-input text-sm w-full pr-4" type="text" placeholder="Your first name..." required>
+                    </div>
+                </div>
+                <div class="flex-auto">
+                    <label class="sr-only" for="lastname">Last Name</label>
+                    <div class="relative">
+                        <input id="lastname" name="LNAME" class="form-input text-sm w-full pr-4" type="text" placeholder="Your last name..." required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phone -->
+            <div>
+                <label class="sr-only" for="phone">Phone</label>
+                <div class="relative">
+                    <input id="phone" name="PHONE" class="form-input text-sm w-full pr-4" type="text" placeholder="Your phone number..." required>
+                </div>
+            </div>
+
+            <!-- Email -->
+            <div>
+                <label class="sr-only" for="email">Email</label>
+                <div class="relative">
+                    <input id="email" name="EMAIL" class="form-input text-sm w-full pr-4" type="email" placeholder="Your email..." required>
+                </div>
+            </div>
+
+            <!-- Job Title -->
+            <div>
+                <label class="sr-only" for="jobtitle">Job Title</label>
+                <div class="relative">
+                    <input id="jobtitle" name="MMERGE3" class="form-input text-sm w-full pr-4" type="text" placeholder="Job title..." required>
+                </div>
+            </div>
+
+            <!-- Company Name -->
+            <div>
+                <label class="sr-only" for="company">Company Name</label>
+                <div class="relative">
+                    <input id="company" name="COMPANY" class="form-input text-sm w-full pr-4" type="text" placeholder="Company name..." required>
+                </div>
+            </div>
+
+            <!-- Company Size -->
+            <div>
+                <label class="sr-only" for="companysize">Company size</label>
+                <div class="relative">
+                    <select id="companysize" name="MMERGE7" class="form-select text-sm w-full" required>
+                        <option selected disabled hidden value="">Company size</option>
+                        <option value="1 to 5 Employees">1 to 5 Employees</option>
+                        <option value="5 to 20 Employees">5 to 20 Employees</option>
+                        <option value="Over 20 Employees">Over 20 Employees</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Communication Preferences -->
+            <div>
+                <p class="text-sm text-gray-500 mb-2">Please select all the ways you would like to hear from YourCVVideo.com Ltd:</p>
+                <label class="flex items-center" for="gdpr3703">
+                    <input type="checkbox" id="gdpr3703" name="gdpr[3703]" class="form-checkbox">
+                    <span class="text-sm text-gray-500 ml-2">Email</span>
+                </label>
+                <label class="flex items-center" for="gdpr3704">
+                    <input type="checkbox" id="gdpr3704" name="gdpr[3704]" class="form-checkbox">
+                    <span class="text-sm text-gray-500 ml-2">Phone</span>
+                </label>
+                <p class="text-sm text-gray-500 my-2">You can unsubscribe at any time by clicking the link in the footer of our emails. For information about our privacy practices, please visit our website.</p>
+                <p class="text-sm text-gray-500 my-2">We use Mailchimp as our marketing platform. By clicking below to subscribe, you acknowledge that your information will be transferred to Mailchimp for processing. <a class="font-medium text-indigo-500 hover:underline" href="https://mailchimp.com/legal/terms">Learn more</a> about Mailchimp's privacy practices.</p>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div>
+        
+            <button class="btn-sm w-full text-sm text-white bg-blue-600 hover:bg-blue-700 group">
+                Submit <span class="tracking-normal text-blue-300 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+            </button>
+        </div>
+    </div>
+</form>

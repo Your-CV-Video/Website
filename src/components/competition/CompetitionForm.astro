@@ -1,0 +1,95 @@
+<form>
+    <div class="space-y-4">
+
+        <!-- Recruiter/Hiring Company Name -->
+       
+        <div>
+            <label class="block text-sm font-medium mb-1" for="title">Title <span class="text-rose-500">*</span></label>
+            <select id="title" class="form-select py-2 w-full" required>
+                <option selected="" disabled="" hidden="" value="">Title</option
+                    >
+                    <option value="Mr">Mr</option>
+                    <option value="Ms">Ms</option>
+                    <option value="Miss">Miss</option>
+                    <option value="Mrs">Mrs</option>
+                    <option value="Other">Other</option>
+                <!-- Add more countries here -->
+            </select>
+            
+        </div>
+       
+
+      
+        <div class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
+            <div class="sm:w-1/2">
+                <label class="block text-sm font-medium mb-1" for="first-name">First Name <span class="text-rose-500">*</span></label>
+                <input id="first_name" class="form-input py-2 w-full" type="text" required />
+            </div>
+            <div class="sm:w-1/2">
+                <label class="block text-sm font-medium mb-1" for="last_name">Last Name <span class="text-rose-500">*</span></label>
+                <input id="last_name" class="form-input py-2 w-full" type="text" required />
+            </div>
+        </div>
+
+        <div class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
+            <div class="sm:w-1/2">
+                <label class="block text-sm font-medium mb-1" for="phone_number">Phone Number <span class="text-rose-500">*</span></label>
+                <input id="phone_number" class="form-input py-2 w-full" type="text" required />
+            </div>
+            <div class="sm:w-1/2">
+                <label class="block text-sm font-medium mb-1" for="email">Email Address <span class="text-rose-500">*</span></label>
+                <input id="email" class="form-input py-2 w-full" type="email" required />
+            </div>
+           
+        </div>
+
+        <div>
+            <label class="block text-sm font-medium mb-1" for="job-title">Job Title<span class="text-rose-500">*</span></label>
+            <input id="job_title" class="form-input py-2 w-full" type="text" required />
+        </div>
+
+        <div>
+            <label class="block text-sm font-medium mb-1" for="company-name">Recruiter/Hiring Company Name <span class="text-rose-500">*</span></label>
+            <input id="company-name" class="form-input py-2 w-full" type="text" required />
+        </div>
+        <div>
+            <label class="block text-sm font-medium mb-1" for="company_size">Company Size <span class="text-rose-500">*</span></label>
+            <select id="company_size" class="form-select py-2 w-full" required>
+                <option selected="" disabled="" hidden="" value=""
+                >Company size</option
+            >
+            <option value="1 to 5 Employees">1 to 5 Employees</option>
+            <option value="5 to 20 Employees">5 to 20 Employees</option>
+            <option value="Over 20 Employees">Over 20 Employees</option>
+                    
+                <!-- Add more countries here -->
+            </select>
+            
+        </div>
+        <div class="mt-5">
+            <p class="block text-sm text-slate-600 mb-1">Please select all the ways you would like to hear from YourCVVideo.com Ltd:</p>
+            <label class="flex items-start">
+                <input type="checkbox" class="form-checkbox mt-0.5"  />
+                <span class="block text-sm text-slate-600 ml-3">Email</span>
+            </label>
+            <label class="flex items-start">
+                <input type="checkbox" class="form-checkbox mt-0.5"  />
+                <span class="block text-sm text-slate-600 ml-3">Phone</span>
+            </label>
+            <p class="block text-sm text-slate-600 mb-1">You can unsubscribe at any time by clicking the link in the footer of our emails. For information about our privacy practices, please visit our website.</p>
+            <p class="block text-sm text-slate-600 mb-1">We use Mailchimp as our marketing platform. By clicking below to subscribe, you acknowledge that your information will be transferred to Mailchimp for processing. <a class="text-blue-600 hover:underline" href="">Learn more</a> about Mailchimp's privacy practices.</p>
+        </div>
+
+       
+
+
+    </div>
+
+    <div class="mt-6">
+        <button class="btn-sm w-full text-sm text-white bg-blue-600 hover:bg-blue-700 group">
+            Submit <span class="tracking-normal text-blue-300 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+        </button>
+    </div>
+
+   
+</form>

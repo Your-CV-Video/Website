@@ -1,25 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Hero from "../components/Section/Hero.astro";
-import Target from "../components/Section/Target.astro";
-import PricingSec from "../components/Section/Pricing.astro";
-import CtaSec from "../components/Section/Cta.astro";
-import FeatureBlock from "../components/Section/Features/Block.astro";
-import Feature1 from "../components/Section/Features/1.astro";
-import Feature2 from "../components/Section/Features/2.astro";
-import Feature3 from "../components/Section/Features/3.astro";
+import SectionHeader from "../components/SectionHeader.astro";
+import CompetitionForm from "../components/competition/CompetitionForm.astro";
 ---
 
 <Layout>
     <section class=" pt-12 md:pt-12">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
             <div class="py-12 md:py-20 border-t border-slate-200">
-
+                <SectionHeader title="Request a Demo"  desc='Book a free demonstration with our Customer Relationship Managers and see how our platform can benefit you.'/>
                 <!-- Section header -->
-                <div class="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-                    <h2 class="h2 font-playfair-display text-slate-800 mb-3">Request a Demo</h2>
-                    <p class="text-xl text-slate-500">Book a free demonstration with our Customer Relationship Managers and see how our platform can benefit you.</p>
-                </div>
+                
 
                 <!-- Section content -->
                 <div class="max-w-xl mx-auto md:max-w-none flex flex-col md:flex-row md:items-center md:space-x-8 lg:space-x-16 xl:space-x-18 space-y-8 space-y-reverse md:space-y-0">

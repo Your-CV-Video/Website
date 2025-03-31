@@ -1,0 +1,41 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SectionHeader from "../components/SectionHeader.astro";
+import CompetitionForm from "../components/competition/CompetitionForm.astro";
+---
+
+<Layout>
+    <section class="relative mb-12">
+
+        <!-- Dark background -->
+        <div class="absolute inset-0 bg-slate-900 pointer-events-none -z-10 mb-36 lg:mb-0 lg:h-[48rem] [clip-path:polygon(0_0,_5760px_0,_5760px_calc(100%_-_352px),_0_100%)]" aria-hidden="true"></div>
+
+        <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="pt-32 md:pt-40">
+
+                <!-- Section header -->
+                <SectionHeader hcolor="text-slate-100" dcolor="text-slate-300" title="Competition For New Users"  desc='The first 1000 paying Users go into a draw and the winner and 3 friends get to spend 7 nights in a 5-Star Luxury Safari Hotel in in South Africa anytime during September and December 2025.'/>
+
+                <!-- Hero image -->
+                <div class="max-w-3xl mx-auto aos-init aos-animate" x-data="{ modalExpanded: false }" data-aos="fade-up">
+                    <div class="relative flex justify-center items-center">
+                        <img class="mx-auto" src="./images/competition.jpeg" width="768" height="432" alt="Wof hero">
+                      
+                    </div>
+
+                  
+                </div>
+
+
+                <div
+                class="order-1 mt-6 md:order-none aos-init aos-animate bg-slate-50 px-6 py-6"
+                data-aos="fade-right"
+            >
+                   <CompetitionForm/>
+                </div>
+
+            </div>
+        </div>
+    </section>
+  
+</Layout>
