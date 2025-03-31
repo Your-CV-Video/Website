@@ -1,0 +1,33 @@
+---
+const { title, desc, features, image } = Astro.props;
+
+---
+
+ <!-- Section content -->
+ <div class="max-w-xl mx-auto md:max-w-none flex flex-col md:flex-row md:items-center md:space-x-8 lg:space-x-16 xl:space-x-18 space-y-8 space-y-reverse md:space-y-0">
+    <!-- Content -->
+    <div class="md:w-7/12 lg:w-1/2 order-1 md:order-none aos-init aos-animate" data-aos="fade-right">
+        <ul class="space-y-6">
+            {features.map(feature => (
+                <li key={feature.title}>
+                    <div class="flex items-center mb-4">
+                        <svg class="h-4 w-4 shrink-0 fill-current text-blue-500 mr-3">
+                            <path d={feature.iconPath}></path>
+                        </svg>
+                        <div class="h3 font-playfair-display text-slate-800">
+                            {feature.title}
+                        </div>
+                    </div>
+                    <div class="text-slate-500 text-lg">
+                        {feature.description}
+                    </div>
+                </li>
+            ))}
+        </ul>
+    </div>
+
+    <!-- Image -->
+    <div class="md:w-5/12 lg:w-1/2 aos-init aos-animate" data-aos="fade-left">
+        <img class="mx-auto md:max-w-none" src={image.src} width={image.width} height={image.height} alt={image.alt} />
+    </div>
+</div>

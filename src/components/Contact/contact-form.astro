@@ -1,0 +1,44 @@
+<form>
+    <div class="space-y-4">
+        <div>
+            <label class="block text-sm font-medium mb-1" for="name">
+                Full Name <span class="text-rose-500">*</span>
+            </label>
+            <input id="name" class="form-input py-2 w-full" type="text" required />
+        </div>
+
+        <div>
+            <label class="block text-sm font-medium mb-1" for="email">
+                Email Address <span class="text-rose-500">*</span>
+            </label>
+            <input id="email" class="form-input py-2 w-full" type="email" required />
+        </div>
+
+        <div>
+            <label class="block text-sm font-medium mb-1" for="phone">
+                Phone Number (Optional)
+            </label>
+            <input id="phone" class="form-input py-2 w-full" type="tel" />
+        </div>
+
+        <div>
+            <label class="block text-sm font-medium mb-1" for="subject">
+                Subject <span class="text-rose-500">*</span>
+            </label>
+            <input id="subject" class="form-input py-2 w-full" type="text" required />
+        </div>
+
+        <div>
+            <label class="block text-sm font-medium mb-1" for="message">
+                Message <span class="text-rose-500">*</span>
+            </label>
+            <textarea id="message" class="form-input py-2 w-full" rows="4" required></textarea>
+        </div>
+    </div>
+
+    <div class="mt-6">
+        <button class="btn-sm w-full text-sm text-white bg-blue-600 hover:bg-blue-700 group">
+            Send Message <span class="tracking-normal text-blue-300 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+        </button>
+    </div>
+</form>

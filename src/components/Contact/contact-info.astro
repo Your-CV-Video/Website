@@ -1,0 +1,86 @@
+---
+const contactInfo = [
+  {
+    label: "Company Name",
+    value: "YourCVVideo.com Ltd",
+    link: "#0",
+  },
+  {
+    label: "Company Reg. No",
+    value: "14921196",
+    link: "#0",
+  },
+  {
+    label: "Sales Email",
+    value: "Sales@YourCVVideo.com",
+    link: "mailto:Sales@YourCVVideo.com",
+  },
+  {
+    label: "Support Email",
+    value: "Support@YourCVVideo.com",
+    link: "mailto:Support@YourCVVideo.com",
+  },
+  {
+    label: "Marketing Email",
+    value: "Marketing@YourCVVideo.com",
+    link: "mailto:Marketing@YourCVVideo.com",
+  },
+];
+
+const locations = [
+  {
+    name: "ENGLAND (Head Office)",
+    address: "Croxley Green, Rickmansworth, Herts WD3 3LL",
+    iconColor: "text-blue-500",
+  },
+  {
+    name: "SOUTH AFRICA",
+    address: "Bellville, Cape Town, Western Cape.",
+    iconColor: "text-rose-400",
+  },
+];
+---
+
+<div class="space-y-4">
+  {contactInfo.map(item => (
+    <div class="mb-4" key={item.label}>
+      <a
+        class="font-medium text-slate-800 hover:text-blue-600 transition duration-150 ease-in-out"
+        href={item.link}
+      >
+        {item.label}
+      </a>
+      <span class="text-slate-300"> : </span>
+      <span class="text-slate-500">{item.value}</span>
+    </div>
+  ))}
+</div>
+
+<ul class="space-y-6 mt-8">
+  {locations.map((location, i) => (
+    <>
+      {i > 0 && (
+        <li key={`separator-${i}`}>
+          <div class="flex justify-center" aria-hidden="true">
+            <svg class="fill-slate-400" height="4" width="36">
+              <circle cx="18" cy="2" r="2"></circle>
+              <circle cx="2" cy="2" r="2"></circle>
+              <circle cx="34" cy="2" r="2"></circle>
+            </svg>
+          </div>
+        </li>
+      )}
+      <li key={location.name}>
+        <div class="flex items-center mb-4">
+          <svg class={`h-4 w-4 shrink-0 fill-current ${location.iconColor} mr-3`}>
+            <path
+              d="M15.722 4.008C14.408 1.214 10.954-.635 7.318.203 5.6.596 4.072 1.561 2.919 2.757A10.57 10.57 0 0 0 .484 6.93C.03 8.458-.173 10.035.18 11.764c.191.862.518 1.683 1.146 2.479a4.876 4.876 0 0 0 2.256 1.522c1.635.469 3.156.192 4.41-.439 1.242-.615 2.298-1.769 2.494-3.094.094-.656-.537-.657-.69-.18-.781 2.126-3.715 2.534-5.265 1.579-1.568-.922-1.185-3.068-.294-4.801.89-1.729 2.454-3.02 3.92-3.338.376-.098.714-.121 1.026-.098.324.018.658.074.98.188.65.2 1.23.591 1.618 1 .27.3.575.386 1.002.461.436.061.95.117 1.499.045.535-.073 1.06-.287 1.41-.807.345-.504.462-1.348.03-2.273"
+            ></path>
+          </svg>
+          <div class="h5 font-playfair-display text-slate-800">{location.name}</div>
+        </div>
+        <div class="text-slate-500 text-lg">{location.address}</div>
+      </li>
+    </>
+  ))}
+</ul>
