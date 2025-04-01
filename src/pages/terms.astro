@@ -4,17 +4,160 @@ import Hero from "../components/Section/Hero.astro";
 import Aboutus from "../components/Section/AboutUs.astro";
 import FeaturedCTASection from "../components/Section/FeaturedCTASection.astro";
 import PolicyPage from "../components/PolicyPage.astro";
-
-
+const { date = " 30/10/2023" } = Astro.props;
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-  <PolicyPage badgeLabel="Terms of service" title="Our terms of service" headerDesc="Read our terms below to learn more about your rights and responsibilities as a YourCVVideo user."></PolicyPage>
+  <PolicyPage
+    badgeLabel="Terms of service"
+    title="Our terms of service"
+    headerDesc="Read our terms below to learn more about your rights and responsibilities as a YourCVVideo user."
+    autherNameColor="text-slate-600"
+    autherDateColor="text-slate-600"
+    autherName="Published"
+    autherDate={date}
+  >
+    <div class="text-slate-800 mb-8">
+      <div class="mt-4">
+        <h4 class="h4 font-playfair-display mb-2 mt-4 underline">
+          DEFINITIONS
+        </h4>
+
+        <p>The 'Company' means YourCVVideo.com Ltd.</p>
+        <p class="mt-4">
+          The 'Client' means the person or business purchasing a subscription.
+        </p>
+        <p class="mt-4">
+          The 'Plan' means the monthly Diamond Package pricing plan.
+        </p>
+        <p class="mt-4">
+          The 'Product' means the Administration Portal, Recruiter Dashboard,
+          the Website, and any other services or components that make up the
+          YourCVVideo.com offering.
+        </p>
+        <p class="mt-4">
+          End User' means the Candidate, Recruiter or any other visitor that
+          uses the YourCVVideo.com website.
+        </p>
+        <p class="mt-4">
+          Qualified Application' means a Candidates application via the Website,
+          where the application is, at YourCVVideo.com sole discretion, deemed
+          to be genuine, and unique.
+        </p>
+        <p class="mt-4">
+          Qualified Candidate' means a candidate who on their application via
+          the Website opted to share their details with the Recruiter, where the
+          Candidate is, at YourCVVideo.com sole discretion, deemed to be
+          genuine, and unique.
+        </p>
+      </div>
+      <div class="mt-4">
+        <h2 class="h4 font-playfair-display mb-2 mt-4 underline">GENERAL</h2>
+        <ul class="list-inside mt-4">
+          <li class="mt-4">
+            <span class=""
+              >1. These Terms (together with the terms of any applicable
+              Application Form) are between the Company and the Client and
+              govern the obligations of both parties under any contract for the
+              provision of the Services.
+            </span>
+          </li>
+          <li class="mt-4">
+            <span class=""
+              >2. These Terms shall take immediate effect in substitution of all
+              previous terms relating to the contents hereof, whether written,
+              oral or implied between the Company and the Client.
+            </span>
+          </li>
+          <li class="mt-4">
+            <span class=""
+              >3. These Terms are deemed to be accepted by the Client upon the
+              application for or opening of an account with the Company for the
+              purpose of providing Services.
+            </span>
+          </li>
+          <li class="mt-4">
+            <span class=""
+              >4. No variation or alteration to these Terms shall be valid
+              unless expressly agreed and confirmed in writing by a Director of
+              the Company.
+            </span>
+          </li>
+        </ul>
+      </div>
+      <div class="mt-4">
+        <h4 class="h4 font-playfair-display mb-2 mt-4 underline">
+          TERM OF CONTRACT AND PAYMENT TERMS
+        </h4>
+        <ul class="list-inside">
+          <li class="mt-4">
+            5. The Clients Administrator shall be the primary contact for
+            registering additional Recruiters and paying for every Recruiter
+            using YourCVVideo.com.
+          </li>
+          <li class="mt-4">
+            6. The term of contract shall be ongoing from initial sign up. (one
+            calendar month)
+          </li>
+          <li class="mt-4">
+            7. The Minimum Term shall apply after the 14-day free trial.
+          </li>
+          <li class="mt-4">
+           8. Unless otherwise agreed, payment shall be made monthly in advance by
+            credit/debit card. The ongoing monthly cost will be dependent on the
+            chosen pricing plan.
+          </li>
+          <li class="mt-4">
+            9. Any changes to the Company's published pricing schedule will be
+            communicated to the Client within a minimum of 14 days prior to the
+            change.
+          </li>
+          <li class="mt-4">
+            10. Payment for due invoices will be taken automatically on each monthly
+            or annual anniversary date.
+          </li>
+          <li class="mt-4">
+            11. Unpaid invoices will result in the suspension of the Service.
+          </li>
+          <li class="mt-4">
+            12. An administration charge of £25 will be made for the un-suspension
+            of a subscription, along with the payment of any unpaid invoices.
+          </li>
+          <li class="mt-4">
+            13. The Company may, at its discretion, require the Client to pay 2 or
+            more month's subscription in advance following the late payment of
+            an invoice.
+          </li>
+        </ul>
+        <div class="mt-4">
+          <h4 class="h4 font-playfair-display mb-2 mt-4 underline"></h4>
+          <p></p>
+        </div>
+        <div class="mt-4">
+          <h4 class="h4 font-playfair-display mb-2 mt-4 underline"></h4>
+          <p></p>
+        </div>
+        <div class="mt-4">
+          <h4 class="h4 font-playfair-display mb-2 mt-4 underline"></h4>
+          <p></p>
+        </div>
+        <div class="mt-4">
+          <h4 class="h4 font-playfair-display mb-2 mt-4 underline"></h4>
+          <p></p>
+        </div>
+        <div class="mt-4">
+          <h4 class="h4 font-playfair-display mb-2 mt-4 underline"></h4>
+          <p></p>
+        </div>
+
+        <div class="mt-4">
+          <h4 class="h4 font-playfair-display mb-2 mt-4 underline"></h4>
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </PolicyPage>
 </Layout>
-
-
-
-

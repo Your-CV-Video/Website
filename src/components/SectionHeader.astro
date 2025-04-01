@@ -1,7 +1,7 @@
 ---
- const {title,desc,hcolor='text-slate-800',dcolor='text-slate-500 '} = Astro.props;
+ const {title,desc,hcolor='text-slate-800',dcolor='text-slate-500 ' ,extraTopCss="pb-8 md:pb-12 "} = Astro.props;
 ---
-<div class="max-w-3xl mx-auto text-center pb-8 md:pb-12 ">
+<div class={`max-w-3xl mx-auto text-center ${extraTopCss}`}>
     <h2 class={`h2 font-playfair-display mb-4 ${hcolor}`}>
        {title}
     </h2>
