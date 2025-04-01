@@ -1,0 +1,44 @@
+---
+const { jobs } = Astro.props;
+import Card1 from "../Card/Card1.astro";
+import Hero2 from "./Hero2.astro";
+---
+
+<div class="md:flex md:items-center md:justify-between mb-3">
+    <!-- Job Title -->
+    <div class="flex items-center justify-center">
+        <p class="text-lg  font-bold  mb-2">22,549 London jobs  + 10 miles</p>
+    </div>
+    <!-- Job Date -->
+    <div class="flex justify-center  md:mt-0">
+        <h4 class="h5 font-bold  mb-2">
+            <select id="" class="form-select py-2 w-full bg-slate-100 rounded-full" required="">
+                <option value="">Select an option</option>
+                <option value="">Published</option>
+                <option value="">Relevance</option>
+                <option value="">Salary - High to Low</option>
+                <option value="">Salary - Low to High</option>
+            </select>
+        </h4>
+    </div>
+</div>
+<div class="max-w-3xl space-y-4">
+    {
+        jobs.map((job:any) =>
+            !job.ishero ? (
+                <Card1
+                    image={job.icon}
+                    header={job.company}
+                    title={job.title}
+                    tags={job.tags}
+                    desc={job.desc}
+                    posted={job.posted}
+                    location={job.location}
+                    day="1d"
+                />
+            ) : (
+                <Hero2 title={job.title} desc={job.desc} />
+            ),
+        )
+    }
+</div>

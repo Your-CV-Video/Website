@@ -1,0 +1,177 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero1 from "../components/Section/Hero1.astro";
+import Job from "../components/Section/Job.astro";
+
+const jobs = [
+    {
+        ishero: false,
+        title: 'Senior Frontend Developer',
+        icon: './images/companies/1.svg',
+        company: 'TechCorp',
+        location: 'London, UK, EC1A 1BB',
+        tags: [
+            '$80K - $110K',
+            '🇬🇧 London, UK',
+            'React',
+            'JavaScript',
+            'Full-time'
+        ],
+        desc: 'Work on cutting-edge frontend features using React and JavaScript.',
+        published: 'Published: 2 days ago',
+        posted: 'Posted 2 days ago'
+    },
+    {
+        ishero: false,
+        title: 'Backend Engineer',
+        icon: './images/companies/2.svg',
+        company: 'DataWorks',
+        location: 'London, UK, WC2N 5DU',
+        tags: [
+            '$90K - $120K',
+            '🇬🇧 London, UK',
+            'Node.js',
+            'Python',
+            'Remote'
+        ],
+        desc: 'Build scalable backend systems using Node.js and Python.',
+        published: 'Published: 2 days ago',
+        posted: 'Posted 2 days ago'
+    },
+    {
+        ishero: false,
+        title: 'Full Stack Developer',
+        icon: './images/companies/3.svg',
+        company: 'CloudTech',
+        location: 'London, UK, W1J 9HP',
+        tags: [
+            '$85K - $115K',
+            '🇬🇧 London, UK',
+            'Vue.js',
+            'Django',
+            'Contract'
+        ],
+        desc: 'Develop both frontend and backend solutions with Vue.js and Django.',
+        published: 'Published: 2 days ago',
+        posted: 'Posted 2 days ago'
+    },
+    {
+        ishero: false,
+        title: 'Product Manager',
+        icon: './images/companies/4.svg',
+        company: 'InnovateX',
+        location: 'London, UK, E14 5AB',
+        tags: [
+            '$100K - $130K',
+            '🇬🇧 London, UK',
+            'Agile',
+            'Leadership',
+            'Hybrid'
+        ],
+        desc: 'Lead product teams to deliver innovative solutions in an Agile environment.',
+        published: 'Published: 2 days ago',
+        posted: 'Posted 2 days ago'
+    },
+    {
+        ishero: true,
+        title: 'Land your dream job',
+        desc: 'Get a weekly email with the latest startup jobs.',
+        published: 'Published: 2 days ago',
+        posted: 'Posted 2 days ago'
+    },
+    {
+        ishero: false,
+        title: 'UX/UI Designer',
+        icon: './images/companies/5.svg',
+        company: 'Designify',
+        location: 'London, UK, SW1A 2DX',
+        tags: [
+            '$70K - $95K',
+            '🇬🇧 London, UK',
+            'Figma',
+            'Sketch',
+            'Freelance'
+        ],
+        desc: 'Design intuitive and beautiful user interfaces using Figma and Sketch.',
+        published: 'Published: 2 days ago',
+        posted: 'Posted 2 days ago'
+    },
+    {
+        ishero: false,
+        title: 'Data Scientist',
+        icon: './images/companies/1.svg',
+        company: 'DataVision',
+        location: 'New York, USA, 10001',
+        tags: [
+            '$95K - $140K',
+            '🇺🇸 New York, USA',
+            'Machine Learning',
+            'R',
+            'Remote'
+        ],
+        desc: 'Analyze data and build machine learning models to generate insights.',
+        published: 'Published: 2 days ago',
+        posted: 'Posted 2 days ago'
+    },
+    {
+        ishero: false,
+        title: 'DevOps Engineer',
+        icon: './images/companies/4.svg',
+        company: 'CloudEdge',
+        location: 'Toronto, Canada, M5H 2N2',
+        tags: [
+            '$110K - $150K',
+            '🇨🇦 Toronto, Canada',
+            'AWS',
+            'Docker',
+            'Full-time'
+        ],
+        desc: 'Manage cloud infrastructure and automation using AWS and Docker.',
+        published: 'Published: 2 days ago',
+        posted: 'Posted 2 days ago'
+    },
+    {
+        ishero: false,
+        title: 'Marketing Specialist',
+        icon: './images/companies/2.svg',
+        company: 'BrandBoost',
+        location: 'Sydney, Australia, 2000',
+        tags: [
+            '$60K - $90K',
+            '🇦🇺 Sydney, Australia',
+            'SEO',
+            'Content Strategy',
+            'Part-time'
+        ],
+        desc: 'Develop and execute marketing strategies focused on SEO and content.',
+        published: 'Published: 2 days ago',
+        posted: 'Posted 2 days ago'
+    }
+];
+
+---
+
+<Layout>
+   
+    <Hero1/>
+    <section class="relative">
+        <div class="">
+            <div class="md:min-w-[30rem] aos-init aos-animate" data-aos="fade-right">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                    <div class="py-8 md:py-16 space-y-16">
+                        <!-- Latest Jobs Section -->
+                          <Job jobs={jobs}></Job>
+                       
+                    </div>
+                </div>
+            </div>
+    
+            <div class="aos-init aos-animate" data-aos="fade-left">
+               <h1>here </h1>
+            </div>
+    
+        </div>
+    </section>
+    
+    
+</Layout>

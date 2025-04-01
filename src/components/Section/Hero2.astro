@@ -1,0 +1,23 @@
+---
+const {title,desc} = Astro.props;
+---
+
+<div class="max-w-6xl mx-auto px-4 sm:px-6 bg-slate-100 ">
+    <div class="max-w-3xl rounded-xs p-8">
+        <div class="flex flex-col justify-between items-center">
+            <!-- Hero Job Content -->
+            <div class="text-center">
+                <h3 class="h4 font-playfair-display text-blue-600 mb-2 ">{title}</h3>
+                <p class="text-slate-800 mb-6">{desc}</p>
+
+                <!-- Subscribe Form -->
+                <form class="w-full">
+                    <div class="flex flex-col sm:flex-row justify-center  ">
+                        <input type="email" class="form-input w-full appearance-none bg-slate-100 border border-slate-700 focus:border-slate-600 rounded-xs px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-slate-500" placeholder="Your email" aria-label="Your email…">
+                        <button class="btn text-white bg-blue-600 hover:bg-blue-700">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
