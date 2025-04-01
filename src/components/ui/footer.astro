@@ -1,4 +1,5 @@
 ---
+import Smlogo from "./smlogo.astro";
 const footNavMenus = [
     {
         header: "Legal",
@@ -39,16 +40,7 @@ const footNavMenus = [
             <div class="sm:col-span-12 lg:col-span-4 lg:max-w-xs">
                 <div class="mb-2">
                     <!-- Logo -->
-                    <a
-                        class="inline-flex text-blue-600 transition duration-150 ease-in-out"
-                        href="index.html"
-                        aria-label="Cruip"
-                    >
-                        <img
-                            src="./images/sm-logo.png"
-                            style="max-width: 60px;"
-                            alt=""
-                        />
+                    <Smlogo></Smlogo>
                     </a>
                 </div>
                 <div class="text-lg font-bold text-slate-800">
