@@ -1,0 +1,47 @@
+---
+const {
+    name,
+    date,
+    imageUrl = "",
+    profileUrl,
+    align = "",
+    nameColor = "text-slate-200",
+    dateClass = "text-slate-600",
+} = Astro.props;
+---
+
+<div class={` flex  ${align}`}>
+    {
+        imageUrl != "" && (
+            <a href={profileUrl}>
+                <img
+                    class="rounded-full shrink-0 mr-3"
+                    src={imageUrl}
+                    width="32"
+                    height="32"
+                    alt={name}
+                />
+            </a>
+        )
+    }
+    <div>
+        {
+            profileUrl != "" ? (
+                <a
+                    class={`font-medium ${nameColor} hover:text-slate-100 transition duration-150 ease-in-out`}
+                    href={profileUrl}
+                >
+                    {name}
+                </a>
+            ) : (
+                <span
+                    class={`font-medium ${nameColor} hover:text-slate-100 transition duration-150 ease-in-out`}
+                >
+                    {name}
+                </span>
+            )
+        }
+        <span class="text-slate-600"> · </span>
+        <span class={`${dateClass}`}>{date}</span>
+    </div>
+</div>
