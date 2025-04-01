@@ -1,21 +1,30 @@
+---
+import '../styles/global.css';
+---
 
 <!doctype html>
+
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Tidy HTML Demo - Home</title>
+		<title>YourCVVideo | Auth</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
-		 <!-- CSS Files -->
-		 <link rel="stylesheet" href="src/styles/global.css" />
+		
+		<!-- CSS Files -->
+		<link rel="stylesheet" href="../src/styles/global.css" />
+		
+		<!-- JavaScript Libraries -->
+		<script src="./js/vendors/alpinejs.min.js" is:inline></script>
+		<script src="./js/vendors/aos.js" is:inline></script>
 
-		 <!-- JavaScript Libraries -->
-		 <script src="../src/styles/js/vendors/alpinejs.min.js" defer></script>
-		 <script src="../src/styles/js/vendors/aos.js" defer></script>
 	</head>
-    <body class="font-inter antialiased bg-white text-slate-800 tracking-tight">
-		<main class="grow">
+	<body class="font-inter antialiased bg-white text-slate-800 tracking-tight">
+		<main class="flex">
             <slot />
+			<script src="./js/main.js" defer></script>
         </main>
 	</body>
+	
 </html>
+
