@@ -1,39 +1,52 @@
 ---
-// import "../styles/global.css";
 import Header from "../components/ui/header.astro";
 import Footer from "../components/ui/footer.astro";
 import '../styles/global.css';
 ---
 
 <!doctype html>
-
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="generator" content={Astro.generator} />
-		<title>YourCVVideo</title>
-		<meta name="viewport" content="width=device-width,initial-scale=1" />
-		<link rel="icon" href="./favicon.ico" type="image/x-icon">s
-		
-		<!-- CSS Files -->
-		<!-- <link rel="stylesheet" href="../src/styles/global.css" /> -->
-		
-		<!-- JavaScript Libraries -->
-		<script src="./js/vendors/alpinejs.min.js" is:inline></script>
-		<script src="./js/vendors/aos.js" is:inline></script>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    
+    <title>YourCVVideo</title>
+    <meta name="description" content="YourCVVideo - The easiest way to create your CV video and land your dream job. Start now and create a professional CV video today!">
+	<meta name="keywords" content="CV video, professional CV, create CV video, job application, resume video, job interview, career opportunities, video production services, digital culture network, keysearch, we are capsule, professional video editing, prune.io, job search, indeed, custom video content, corporate video solutions, explainer video production, animated video services, videography experts, video marketing strategies, video content creation, brand video development, event video coverage, testimonial video production, product demo videos, training video production, video advertising solutions, video storytelling, 360-degree video production, virtual tour videos, video production company near me" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    
+    <!-- Open Graph Tags for better social sharing -->
+    <meta property="og:title" content="YourCVVideo" />
+    <meta property="og:description" content="Create a professional CV video to enhance your job applications and stand out to employers." />
+    <meta property="og:image" content="./images/og-image.jpg" />
+    <meta property="og:url" content="https://yourcvvideo.com" />
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="YourCVVideo">
+    <meta name="twitter:description" content="Create a professional CV video to enhance your job applications and stand out to employers.">
+    <meta name="twitter:image" content="./images/twitter-image.jpg">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../src/styles/global.css" />
+    
+    <!-- JavaScript Libraries -->
+    <script src="./js/vendors/alpinejs.min.js" is:inline></script>
+    <script src="./js/vendors/aos.js" is:inline></script>
+</head>
 
-	</head>
-	<body class="font-inter antialiased bg-white text-slate-900 tracking-tight">
-		<!-- Page wrapper -->
-		<div class="flex flex-col min-h-screen overflow-hidden">
-			<Header />
-			<main class="grow">
-				<slot />
-			</main>
-			<Footer/>
-			
-			<!-- Main JavaScript -->
-			<script src="./js/main.js" defer></script>
-		</div>
-	</body>
+<body class="font-inter antialiased bg-white text-slate-900 tracking-tight">
+    <!-- Page wrapper -->
+    <div class="flex flex-col min-h-screen overflow-hidden">
+        <Header />
+        <main class="grow">
+            <slot />
+        </main>
+        <Footer/>
+        
+        <!-- Main JavaScript -->
+        <script src="./js/main.js" defer></script>
+    </div>
+</body>
 </html>
