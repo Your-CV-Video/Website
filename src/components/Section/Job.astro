@@ -4,7 +4,7 @@ import Card1 from "../Card/Card1.astro";
 import Hero2 from "./Hero2.astro";
 ---
 
-<div class="md:flex md:items-center md:justify-between mb-3">
+<div class="md:flex md:items-center md:justify-between mb-6">
     <!-- Job Title -->
     <div class="flex items-center justify-center">
         <p class="text-lg  font-bold  mb-2">22,549 London jobs  + 10 miles</p>
@@ -22,7 +22,7 @@ import Hero2 from "./Hero2.astro";
         </h4>
     </div>
 </div>
-<div class="space-y-4">
+<div class="space-y-8">
     {
         jobs.map((job:any) =>
             !job.ishero ? (
@@ -34,6 +34,7 @@ import Hero2 from "./Hero2.astro";
                     desc={job.desc}
                     posted={job.posted}
                     location={job.location}
+                    feature={job.feature}
                     day="1d"
                 />
             ) : (

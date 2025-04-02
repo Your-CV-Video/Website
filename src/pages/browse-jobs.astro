@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Hero1 from "../components/Section/Hero1.astro";
-import Job from "../components/Section/Job.astro";
+import Job from "../components/Section/Job.astro"
 
 const jobs = [
     {
@@ -20,6 +20,7 @@ const jobs = [
         desc: "Work on cutting-edge frontend features using React and JavaScript.",
         published: "Published: 2 days ago",
         posted: "Posted 2 days ago",
+        feature:'New'
     },
     {
         ishero: false,
@@ -31,6 +32,7 @@ const jobs = [
         desc: "Build scalable backend systems using Node.js and Python.",
         published: "Published: 2 days ago",
         posted: "Posted 2 days ago",
+        feature:'Featured'
     },
     {
         ishero: false,
@@ -42,6 +44,7 @@ const jobs = [
         desc: "Develop both frontend and backend solutions with Vue.js and Django.",
         published: "Published: 2 days ago",
         posted: "Posted 2 days ago",
+        feature:'Promoted'
     },
     {
         ishero: false,
@@ -59,6 +62,7 @@ const jobs = [
         desc: "Lead product teams to deliver innovative solutions in an Agile environment.",
         published: "Published: 2 days ago",
         posted: "Posted 2 days ago",
+        feature:''
     },
     {
         ishero: true,
@@ -66,6 +70,7 @@ const jobs = [
         desc: "Get a weekly email with the latest startup jobs.",
         published: "Published: 2 days ago",
         posted: "Posted 2 days ago",
+        feature:''
     },
     {
         ishero: false,
@@ -77,6 +82,7 @@ const jobs = [
         desc: "Design intuitive and beautiful user interfaces using Figma and Sketch.",
         published: "Published: 2 days ago",
         posted: "Posted 2 days ago",
+        feature:''
     },
     {
         ishero: false,
@@ -94,6 +100,7 @@ const jobs = [
         desc: "Analyze data and build machine learning models to generate insights.",
         published: "Published: 2 days ago",
         posted: "Posted 2 days ago",
+        feature:''
     },
     {
         ishero: false,
@@ -111,6 +118,7 @@ const jobs = [
         desc: "Manage cloud infrastructure and automation using AWS and Docker.",
         published: "Published: 2 days ago",
         posted: "Posted 2 days ago",
+        feature:''
     },
     {
         ishero: false,
@@ -128,6 +136,7 @@ const jobs = [
         desc: "Develop and execute marketing strategies focused on SEO and content.",
         published: "Published: 2 days ago",
         posted: "Posted 2 days ago",
+        feature:''
     },
 ];
 ---
@@ -162,7 +171,7 @@ const jobs = [
                             <div class="sm:w-1/3">
                                 <button
                                     class="btn text-white bg-blue-600 hover:bg-blue-700 sm: w-full"
-                                    >Subscribe</button
+                                    >Search</button
                                 >
                             </div>
                         </div>
@@ -202,7 +211,7 @@ const jobs = [
                     <Job jobs={jobs} />
                 </div>
                 <article
-                    class="h-full flex flex-col space-y-5 aos-init aos-animate"
+                    class="h-full flex flex-col space-y-5 aos-init aos-animate "
                     data-aos="fade-up"
                     data-aos-delay="100"
                 >
