@@ -5,93 +5,90 @@ import CompetitionForm from "../components/competition/CompetitionForm.astro";
 ---
 
 <Layout>
-    <section class=" pt-12 md:pt-12">
+    <section class="relative ">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
-            <div class="py-12 md:py-20 border-t border-slate-200">
-                <SectionHeader title="Request a Demo"  desc='Book a free demonstration with our Customer Relationship Managers and see how our platform can benefit you.'/>
-                <!-- Section header -->
-                
+            <SectionHeader title="Request a Demo"  desc='Book a free demonstration with our Customer Relationship Managers and see how our platform can benefit you.'/>
+            <!-- Section header -->
+            
 
-                <!-- Section content -->
-                <div class="max-w-xl mx-auto md:max-w-none flex flex-col md:flex-row md:items-center md:space-x-8 lg:space-x-16 xl:space-x-18 space-y-8 space-y-reverse md:space-y-0">
+            <!-- Section content -->
+            <div class="max-w-xl mx-auto md:max-w-none flex flex-col md:flex-row md:items-center md:space-x-8 lg:space-x-16 xl:space-x-18 space-y-8 space-y-reverse md:space-y-0 mb-6">
 
-                    <!-- Content -->
-                    <div class="md:w-5/12 lg:w-1/2 aos-init aos-animate" data-aos="fade-left">
-                        <img class="mx-auto md:max-w-none" src="./images/target.png" width="540" height="540" alt="Request a Demo">
-                    </div>
+                <!-- Content -->
+                <div class="md:w-5/12 lg:w-1/2 aos-init aos-animate" data-aos="fade-left">
+                    <img class="mx-auto md:max-w-none" src="./images/target.png" width="540" height="540" alt="Request a Demo">
+                </div>
 
-                    <div class="md:w-7/12 lg:w-1/2 order-1 md:order-none aos-init aos-animate" data-aos="fade-right">
-                        <form>
-                            <div class="space-y-4">
+                <div class="md:w-7/12 lg:w-1/2 order-1 md:order-none aos-init aos-animate" data-aos="fade-right">
+                    <form>
+                        <div class="space-y-4">
 
-                                <!-- Recruiter/Hiring Company Name -->
-                                <div>
-                                    <label class="block text-sm font-medium mb-1" for="company-name">Recruiter/Hiring Company Name <span class="text-rose-500">*</span></label>
-                                    <input id="company-name" class="form-input py-2 w-full" type="text" required />
+                            <!-- Recruiter/Hiring Company Name -->
+                            <div>
+                                <label class="block text-sm font-medium mb-1" for="company-name">Recruiter/Hiring Company Name <span class="text-rose-500">*</span></label>
+                                <input id="company-name" class="form-input py-2 w-full" type="text" required />
+                            </div>
+
+                          
+                            <div class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
+                                <div class="sm:w-1/2">
+                                    <label class="block text-sm font-medium mb-1" for="first-name">First Name <span class="text-rose-500">*</span></label>
+                                    <input id="first_name" class="form-input py-2 w-full" type="text" required />
                                 </div>
-
-                              
-                                <div class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
-                                    <div class="sm:w-1/2">
-                                        <label class="block text-sm font-medium mb-1" for="first-name">First Name <span class="text-rose-500">*</span></label>
-                                        <input id="first_name" class="form-input py-2 w-full" type="text" required />
-                                    </div>
-                                    <div class="sm:w-1/2">
-                                        <label class="block text-sm font-medium mb-1" for="last_name">Last Name <span class="text-rose-500">*</span></label>
-                                        <input id="last_name" class="form-input py-2 w-full" type="text" required />
-                                    </div>
+                                <div class="sm:w-1/2">
+                                    <label class="block text-sm font-medium mb-1" for="last_name">Last Name <span class="text-rose-500">*</span></label>
+                                    <input id="last_name" class="form-input py-2 w-full" type="text" required />
                                 </div>
+                            </div>
 
-                                <div class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
-                                    <div class="sm:w-1/2">
-                                        <label class="block text-sm font-medium mb-1" for="email">Email Address <span class="text-rose-500">*</span></label>
-                                        <input id="email" class="form-input py-2 w-full" type="email" required />
-                                    </div>
-                                    <div class="sm:w-1/2">
-                                        <label class="block text-sm font-medium mb-1" for="no-of-employees">No. of Employees <span class="text-rose-500">*</span></label>
-                                        <input id="no-of-employees" class="form-input py-2 w-full" type="number" required />
-                                    </div>
+                            <div class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
+                                <div class="sm:w-1/2">
+                                    <label class="block text-sm font-medium mb-1" for="email">Email Address <span class="text-rose-500">*</span></label>
+                                    <input id="email" class="form-input py-2 w-full" type="email" required />
                                 </div>
-
-                                <div class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
-                                    <div class="sm:w-1/2">
-                                        <label class="block text-sm font-medium mb-1" for="country">Country <span class="text-rose-500">*</span></label>
-                                        <select id="country" class="form-select py-2 w-full" required>
-                                            <option>United States</option>
-                                            <option>United Kingdom</option>
-                                            <option>Germany</option>
-                                            <!-- Add more countries here -->
-                                        </select>
-                                    </div>
-                                    <div class="sm:w-1/2">
-                                        <label class="block text-sm font-medium mb-1" for="town">Town/City <span class="text-rose-500">*</span></label>
-                                        <input id="town" class="form-input py-2 w-full" type="text" required />
-                                    </div>
+                                <div class="sm:w-1/2">
+                                    <label class="block text-sm font-medium mb-1" for="no-of-employees">No. of Employees <span class="text-rose-500">*</span></label>
+                                    <input id="no-of-employees" class="form-input py-2 w-full" type="number" required />
                                 </div>
+                            </div>
 
-                                <div class="mt-6">
-                                    <label class="block text-sm font-medium mb-1" for="time-slot">Book your required time slot for a Free Demonstration (30 mins)</label>
-                                    <input id="time-slot" class="form-input py-2 w-full" type="datetime-local" required />
+                            <div class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
+                                <div class="sm:w-1/2">
+                                    <label class="block text-sm font-medium mb-1" for="country">Country <span class="text-rose-500">*</span></label>
+                                    <select id="country" class="form-select py-2 w-full" required>
+                                        <option>United States</option>
+                                        <option>United Kingdom</option>
+                                        <option>Germany</option>
+                                        <!-- Add more countries here -->
+                                    </select>
                                 </div>
-
+                                <div class="sm:w-1/2">
+                                    <label class="block text-sm font-medium mb-1" for="town">Town/City <span class="text-rose-500">*</span></label>
+                                    <input id="town" class="form-input py-2 w-full" type="text" required />
+                                </div>
                             </div>
 
                             <div class="mt-6">
-                                <button class="btn-sm w-full text-sm text-white bg-blue-600 hover:bg-blue-700 group">
-                                    Submit <span class="tracking-normal text-blue-300 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
-                                </button>
+                                <label class="block text-sm font-medium mb-1" for="time-slot">Book your required time slot for a Free Demonstration (30 mins)</label>
+                                <input id="time-slot" class="form-input py-2 w-full" type="datetime-local" required />
                             </div>
 
-                            <div class="mt-5">
-                                <label class="flex items-start">
-                                    <input type="checkbox" class="form-checkbox mt-0.5" checked />
-                                    <span class="text-sm text-slate-500 ml-3">By filling out this form, I consent to the collection and use of my personal data.</span>
-                                </label>
-                            </div>
-                        </form>
-                    </div>
+                        </div>
+
+                        <div class="mt-6">
+                            <button class="btn-sm w-full text-sm text-white bg-blue-600 hover:bg-blue-700 group">
+                                Submit <span class="tracking-normal text-blue-300 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+                            </button>
+                        </div>
+
+                        <div class="mt-5">
+                            <label class="flex items-start">
+                                <input type="checkbox" class="form-checkbox mt-0.5" checked />
+                                <span class="text-sm text-slate-500 ml-3">By filling out this form, I consent to the collection and use of my personal data.</span>
+                            </label>
+                        </div>
+                    </form>
                 </div>
-
             </div>
         </div>
     </section>

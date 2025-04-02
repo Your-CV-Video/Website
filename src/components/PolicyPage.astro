@@ -23,34 +23,42 @@ const policyMenu = [
 ];
 ---
 
-<Section class="realtive ">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-        <div
-            class="w-full flex items-center justify-between space-x-10 overflow-x-scroll no-scrollbar py-5 border-b border-slate-100"
-        >
-            <div class="w-full flex items-center justify-between space-x-10">
-                <ul class="flex md:flex-wrap -mx-5 -my-2">
-                    {
-                        policyMenu.map((menu) => (
-                            <li class="mx-5 my-2">
-                                {/* ?'font-medium whitespace-nowrap text-slate-800 hover:text-slate-600 transition duration-150 ease-in-out cursor-pointer' */}
-                                <a
-                                    href={menu.uri}
-                                    class={`font-medium whitespace-nowrap transition duration-150 ease-in-out cursor-pointer 
-           ${currentPath === menu.uri ? "text-blue-600 font-bold" : "text-slate-800 hover:text-slate-600"}`}
-                                >
-                                    {menu.title}
-                                </a>
-                            </li>
-                        ))
-                    }
-                </ul>
+<Section class="realtive">
+    <div class="w-full bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div
+                class="max-w-7xl flex items-center justify-between space-x-10 overflow-x-scroll no-scrollbar py-5"
+            >
+                <div class="flex items-center justify-between space-x-10">
+                    <ul class="flex md:flex-wrap -mx-5 -my-2">
+                        {
+                            policyMenu.map((menu) => (
+                                <li class="mx-5 my-2">
+                                    {/* ?'font-medium whitespace-nowrap text-slate-800 hover:text-slate-600 transition duration-150 ease-in-out cursor-pointer' */}
+                                    <a
+                                        href={menu.uri}
+                                        class={`font-medium whitespace-nowrap transition duration-150 ease-in-out cursor-pointer 
+       ${currentPath === menu.uri ? "text-blue-600 font-bold" : "text-slate-800 hover:text-slate-600"}`}
+                                    >
+                                        {menu.title}
+                                    </a>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="py-12 md:py-12 border-t border-slate-200">
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="py-12 md:py-12">
             <!-- <Badge label={badgeLabel}></Badge> -->
             <div class="w-full items-center flex justify-center">
-                <div class="inline-flex text-md font-semibold text-center  px-4 py-2 text-emerald-700 bg-emerald-200 rounded-full">{badgeLabel}</div>
+                <div
+                    class="inline-flex text-md font-semibold text-center px-4 py-2 text-emerald-700 bg-emerald-200 rounded-full"
+                >
+                    {badgeLabel}
+                </div>
             </div>
             <SectionHeader extraTopCss="" title={title} desc={headerDesc} />
             <div class="flex justify-center mt-6 mb-6" aria-hidden="true">
@@ -62,7 +70,7 @@ const policyMenu = [
             </div>
         </div>
     </div>
-    
+
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
         <AuthorProfile
             nameColor={autherNameColor}
@@ -70,7 +78,7 @@ const policyMenu = [
             dateColor={autherDateColor}
             date={autherDate}
         />
-        
+
         <slot />
     </div>
 </Section>
