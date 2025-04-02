@@ -3,29 +3,71 @@ import SectionHeader from "./SectionHeader.astro";
 import Section from "./Section/Section.astro";
 import Badge from "./Badge.astro";
 import AuthorProfile from "./Card/AuthorProfile.astro";
-const {badgeLabel,title,headerDesc} = Astro.props
-const {autherNameColor,autherName,autherDate,autherDateColor} = Astro.props
-
+const { badgeLabel, title, headerDesc } = Astro.props;
+const { autherNameColor, autherName, autherDate, autherDateColor } =
+    Astro.props;
+const currentPath = Astro.url.pathname;
+const policyMenu = [
+    {
+        title: "Terms of Service",
+        uri: "/terms",
+    },
+    {
+        title: "Privacy Policy",
+        uri: "/privacy",
+    },
+    {
+        title: "Cookie Policy",
+        uri: "/cookie-policy",
+    },
+];
 ---
 
-
-<Section class="realtive pt-12 md:pt-12 ">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 ">
+<Section class="realtive pt-12 md:pt-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div
+            class="w-full flex items-center justify-between space-x-10 overflow-x-scroll no-scrollbar py-5 border-b border-slate-100"
+        >
+            <div class="w-full flex items-center justify-between space-x-10">
+                <ul class="flex md:flex-wrap -mx-5 -my-2">
+                    {
+                        policyMenu.map((menu) => (
+                            <li class="mx-5 my-2">
+                                {/* ?'font-medium whitespace-nowrap text-slate-800 hover:text-slate-600 transition duration-150 ease-in-out cursor-pointer' */}
+                                <a
+                                    href={menu.uri}
+                                    class={`font-medium whitespace-nowrap transition duration-150 ease-in-out cursor-pointer 
+           ${currentPath === menu.uri ? "text-blue-600 font-bold" : "text-slate-800 hover:text-slate-600"}`}
+                                >
+                                    {menu.title}
+                                </a>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
+        </div>
         <div class="py-12 md:py-12 border-t border-slate-200">
             <!-- <Badge label={badgeLabel}></Badge> -->
-            <SectionHeader extraTopCss="" title={title} desc={headerDesc} ></SectionHeader>
+            <SectionHeader extraTopCss="" title={title} desc={headerDesc} />
+            <div class="flex justify-center mt-6 mb-6" aria-hidden="true">
+                <svg class="fill-blue-500" height="4" width="36">
+                    <circle cx="18" cy="2" r="2"></circle>
+                    <circle cx="2" cy="2" r="2"></circle>
+                    <circle cx="34" cy="2" r="2"></circle>
+                </svg>
+            </div>
         </div>
     </div>
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 ">
-        <AuthorProfile nameColor={autherNameColor} name={autherName} dateColor={autherDateColor} date={autherDate}/>
-        <slot>
-          
-        </slot>
+    
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <AuthorProfile
+            nameColor={autherNameColor}
+            name={autherName}
+            dateColor={autherDateColor}
+            date={autherDate}
+        />
+        
+        <slot />
     </div>
 </Section>
-
-
-
-
-
-

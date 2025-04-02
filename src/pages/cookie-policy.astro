@@ -4,6 +4,7 @@ import Hero from "../components/Section/Hero.astro";
 import Aboutus from "../components/Section/AboutUs.astro";
 import FeaturedCTASection from "../components/Section/FeaturedCTASection.astro";
 import PolicyPage from "../components/PolicyPage.astro";
+const currentPath = Astro.url.pathname;
 
 const { date = " 30/10/2023" } = Astro.props;
 
@@ -13,9 +14,9 @@ const { date = " 30/10/2023" } = Astro.props;
 
 <Layout>
     <PolicyPage
-        title="Our commitment to protecting your privacy"
-        badgeLabel="Privacy policy"
-        headerDesc="​At YourCVVideo.com, we are committed to safeguarding your personal information and ensuring transparency about how we collect, use, and protect your data. This Privacy Policy outlines our practices regarding your personal data when you interact with our services."
+        title="Our cookie policy"
+        badgeLabel="Cookies policy"
+        headerDesc=`This Cookie Policy takes effect on June 3, 2022. Last updated on ${date}`
         autherNameColor="text-slate-600"
         autherDateColor="text-slate-600"
         autherName="Published"
