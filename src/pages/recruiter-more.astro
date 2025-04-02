@@ -23,7 +23,7 @@ import Feature3 from "../components/Section/Features/3.astro";
         <!-- Dark background -->
         <div class="absolute inset-0 bg-slate-900 pointer-events-none -z-10 mb-36 lg:mb-0 lg:h-[48rem] [clip-path:polygon(0_0,_5760px_0,_5760px_calc(100%_-_352px),_0_100%)]" aria-hidden="true"></div>
 
-        <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
             <div class="pt-32 md:pt-40">
 
                 <!-- Section header -->
@@ -51,7 +51,7 @@ import Feature3 from "../components/Section/Features/3.astro";
 
                     <!-- Modal dialog -->
                     <div id="modal" class="fixed inset-0 z-50 overflow-hidden flex items-center justify-center px-4 sm:px-6" role="dialog" aria-modal="true" aria-labelledby="modal-headline" x-show="modalExpanded" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-out duration-200" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95" style="display: none;">
-                        <div class="bg-white overflow-auto max-w-6xl w-full max-h-full" @click.away="modalExpanded = false" @keydown.escape.window="modalExpanded = false">
+                        <div class="bg-white overflow-auto max-w-7xl w-full max-h-full" @click.away="modalExpanded = false" @keydown.escape.window="modalExpanded = false">
                             <video x-init="$watch('modalExpanded', value => value ? $el.play() : $el.pause())" class="w-full aspect-video" width="1920" height="1080" loop="" controls="">
                                 <source src="./videos/recvideo1.mp4" type="video/mp4">
                                 Your browser does not support the video tag.

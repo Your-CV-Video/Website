@@ -8,7 +8,7 @@ const { class: relativeClass="" } = Astro.props;
 
 <Section class={`${relativeClass}`}>
     <DarkBg class="[clip-path:polygon(0_0,_5760px_0,_5760px_calc(100%_-_352px),_0_100%)]"/>
-    <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
         <div class="pt-32 pb-20 md:pt-40 md:pb-44">
             <!-- Hero content -->
             <div class="max-w-xl mx-auto md:max-w-none md:flex md:items-center md:space-x-8 lg:space-x-16 xl:space-x-20 space-y-16 md:space-y-0">
@@ -74,7 +74,7 @@ const { class: relativeClass="" } = Astro.props;
                         x-transition:leave-end="opacity-0 scale-95"
                         x-cloak
                     >
-                        <div class="bg-white overflow-auto max-w-6xl w-full max-h-full" @click.away="modalExpanded = false" @keydown.escape.window="modalExpanded = false">
+                        <div class="bg-white overflow-auto max-w-7xl w-full max-h-full" @click.away="modalExpanded = false" @keydown.escape.window="modalExpanded = false">
                             <video x-init="$watch('modalExpanded', value => value ? $el.play() : $el.pause())" class="w-full aspect-video" width="1920" height="1080" loop controls>
                                 <source src="./videos/video.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
