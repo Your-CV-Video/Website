@@ -1,85 +1,414 @@
 ---
 import Section from "./Section.astro";
 const { relativeClass = "" } = Astro.props;
+const audienceSections = [
+    {
+        title: "For Recruitment Agencies",
+        subtitle: "Save Time. Find the Best Talent.",
+        description:
+            "Quickly identify top talent with AI-powered pre-screening. Automate CV filtering, save hours per hire, and focus on the best candidates while reducing bias.",
+        image: "./images/recruitment-agencies.png",
+        cta: "Learn More",
+    },
+    {
+        title: "For Hiring Companies",
+        subtitle: "Efficient Hiring. Stronger Teams.",
+        description:
+            "Make smarter hiring decisions with AI-driven insights. Assess skills, personality, and cultural fit before interviews, ensuring stronger teams and lower turnover.",
+        image: "./images/hiring-companies.png",
+        cta: "Learn More",
+    },
+    {
+        title: "For Job Seekers",
+        subtitle: "Stand Out. Get Hired Faster.",
+        description:
+            "Stand out with video applications. Showcase your personality beyond a CV, get noticed faster, and receive AI feedback to improve your chances of getting hired.",
+        image: "./images/job-seekers.png",
+        cta: "Learn More",
+    },
+];
+const countries = [
+  {
+    name: "UK",
+    image: "/images/flags/uk.png"
+  },
+  {
+    name: "South Africa",
+    image: "/images/flags/south-africa.png"
+  },
+  {
+    name: "Australia",
+    image: "/images/flags/australia.png"
+  },
+  {
+    name: "New Zealand",
+    image: "/images/flags/new-zealand.png"
+  },
+  {
+    name: "India",
+    image: "/images/flags/india.png"
+  },
+  {
+    name: "Pakistan",
+    image: "/images/flags/pakistan.png"
+  },
+  {
+    name: "Singapore",
+    image: "/images/flags/singapore.png"
+  },
+  {
+    name: "Hong Kong",
+    image: "/images/flags/hong-kong.png"
+  },
+  {
+    name: "UAE",
+    image: "/images/flags/uae.png"
+  },
+];
+
+// 2274ea
+
+const howItWorks = [
+  {
+    step: 1,
+    title: "Post Job",
+    description: "Recruiters create a job posting with custom questions to assess candidates.",
+    image: "/images/job_post_1.jpg",  // Replace with your actual image link
+    icon: "./images/job-post.png"  // Replace with your actual icon link
+  },
+  {
+    step: 2,
+    title: "Submit Video",
+    description: "Job seekers submit a video CV answering specific questions tailored to the job, giving recruiters a deeper insight into their personality, communication, and skills.",
+    image: "/images/video-submit.jpg",  // Replace with your actual image link
+    icon: "./images/video.png"  // Replace with your actual icon link
+  },
+  {
+    step: 3,
+    title: "Screen Candidates",
+    description: "YourCVVideo's AI algorithm filters out unqualified candidates, saving recruiters time. The tool analyzes video quality, clarity, and answers, and ranks candidates for a quicker decision-making process.",
+    image: "/images/ai-screening.jpg",  // Replace with your actual image link
+    icon: "./images/ai-screening.png"  // Replace with your actual icon link
+  },
+  {
+    step: 4,
+    title: "Hire Talent",
+    description: "Interview the top candidates through the platform and make smarter, faster hiring decisions.",
+    image: "/images/interview-hire.jpg",  // Replace with your actual image link
+    icon: "./images/interview-hire.png"  // Replace with your actual icon link
+  }
+];
+
+
+
 ---
 
 <Section class={`${relativeClass}`}>
-
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
-        <div class="py-6 md:py-10">
-
-         
-            <article class="text-lg text-slate-500" data-aos-id-testimonials="">
-
-                <p class="mb-6 text-xl font-semibold text-blue-600">
-                    The most valuable commodity in life and business today is <strong>TIME</strong>.
+        <div class="py-12 md:py-20">
+            <div class="max-w-3xl space-y-4 mx-auto text-center">
+                <h2 class="h2 text-slate-800">
+                    Time is the Most Valuable Asset in Life and Business
+                </h2>
+                <p class="text-lg text-slate-500">
+                    Once lost, time can never be recovered. Yet, Recruitment
+                    Consultants and HR Professionals still spend countless hours
+                    sifting through unsuitable CVs. The reality? The “best CVs”
+                    don’t always mean the best candidates.
                 </p>
-                
-                <p class="mb-6">
-                    Time lost can never be regained. So why do <strong>Recruitment Consultants</strong> and 
-                    <strong>HR Professionals</strong> waste hours reviewing unsuitable CVs?  
-                    Let’s be honest—**the “best CVs” don’t always mean the “best candidates.”**
-                </p>
-                
-                <p class="mb-6 text-lg font-semibold text-slate-800">
-                    That changes now...
-                </p>
+            </div>
+        </div>
+    </div>
+</Section>
 
-                <p class="mb-6">
-                    <strong>YourCVVideo.com Ltd</strong> is a revolutionary 
-                    <span class="text-blue-600 font-semibold">SaaS platform</span> designed for 
-                    <strong>Recruitment Agencies</strong> and <strong>Hiring Companies</strong>.  
-                    Our <span class="text-blue-600 font-semibold">AI-powered pre-screening tool</span> 
-                    saves recruiters <strong>2-3 hours per day</strong>, streamlining the hiring process 
-                    by eliminating time spent on unqualified CVs.
-                </p>
 
-                <p class="mb-6">
-                    <strong>Say goodbye to traditional written CVs</strong>—our cutting-edge platform introduces  
-                    <span class="text-blue-600 font-semibold">video applications</span>, allowing candidates to 
-                    showcase their skills and personality in a dynamic way.
-                </p>
 
-                <p class="mb-6">
-                    Our unique value lies in <strong>Human Intelligence + Artificial Intelligence</strong>,  
-                    leveraging video functionality to enhance personal connections in recruitment.
+<section class="bg-slate-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="py-12 md:py-20">
+            <div class="max-w-3xl space-y-4 mx-auto text-center mb-8">
+                <h2 class="h2 text-slate-800">
+                    Hire Smarter and Build Stronger Teams
+                </h2>
+                <p class="text-lg text-slate-500">
+                    You need a faster, more efficient hiring process. Our
+                    AI-powered tools can help.
                 </p>
+            </div>
 
-                <p class="mb-6">
-                    <strong>For Recruiters:</strong> Quickly view and assess candidates, focusing only on 
-                    those with the right skills.
-                </p>
+            <div
+                class="max-w-sm mx-auto sm:max-w-none grid gap-12 sm:grid-cols-2 md:grid-cols-3 sm:gap-x-6 sm:gap-y-8 items-start "
+                data-aos-id-testimonials=""
+            >
+                <!-- 1st Testimonial -->
 
-                <p class="mb-6">
-                    <strong>For Candidates:</strong> Get noticed faster, demonstrate skills effectively, and 
-                    increase job success rates with **CVVideos**.
-                </p>
+                {
+                    audienceSections.map((audSec) => (
+                        <article
+                            class="   h-full flex flex-col bg-white p-6 shadow-xl aos-init aos-animate rounded-2xl"
+                            data-aos="fade-up"
+                            data-aos-anchor="[data-aos-id-testimonials]"
+                        >
+                            <div class="mb-4">
+                                <img
+                                    style="width:50px"
+                                    src={audSec.image}
+                                    alt=""
+                                />
+                            </div>
+                            <div class=" glow">
+                                <p class="text-blue-600 text-sm font-semibold block mb-2">
+                                    {audSec.title}
+                                </p>
+                                <p class="text-black text-xl font-medium glow mb-4">
+                                    {audSec.subtitle}
+                                </p>
+                                <p class="text-black  font-normal mb-4">
+                                    {audSec.description}
+                                </p>
+                                <p>
+                                    <span class="tracking-normal font-semibold text-blue-600 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out">
+                                        {audSec.cta} -&gt;
+                                    </span>
+                                </p>
+                            </div>
+                        </article>
+                    ))
+                }
+            </div>
+        </div>
+    </div>
+</section>
 
-                <p class="mb-6">
-                    YourCVVideo is available for recruiters in  
-                    <strong>UK, South Africa, Australia, New Zealand, India, Pakistan, Singapore, Hong Kong, UAE, 
-                    and 23 European countries.</strong>
-                </p>
+<section>
 
-                <p class="text-lg font-semibold text-blue-600">
-                    Join the Recruitment Revolution Today!
-                </p>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="py-8 md:py-16">
 
+            <article class="max-w-sm mx-auto space-y-5 md:max-w-none md:flex md:items-center md:space-y-0 md:space-x-8 lg:space-x-16">
+                <!-- Image -->
+                <a class="relative block group overflow-hidden md:w-1/2 aos-init aos-animate" href="blog-post.html" data-aos="fade-down">
+                    <img class="w-full aspect-16/9 md:aspect-27/17 object-cover group-hover:scale-105 transition duration-700 ease-out" src="./images/ai-powered-recruitment-transformation.png" width="540" height="340" alt="News 01">
+                   
+                </a>
+                <!-- Content -->
+                <div class="md:w-1/2 aos-init aos-animate" data-aos="fade-up">
+                    <header>
+                        <h2 class="h4 md:text-4xl lg:text-5xl  mb-3">
+                            <span class="text-black " >Transforming Recruitment with AI-Powered Precision</span>
+                        </h2>
+                    </header>
+                    <p class="text-lg text-slate-500">Welcome to YourCVVideo.com Ltd—a cutting-edge SaaS platform built specifically for recruitment agencies and hiring companies. Our AI-driven pre-screening tool revolutionizes the hiring process, saving recruiters 2–3 hours daily by eliminating time spent on unqualified CVs and optimizing the selection process.
+
+                    </p>
+                    
+                </div>
             </article>
 
-            <!-- Call-to-Action Button -->
-            <div class="text-center mt-8">
-                <a href="browse-jobs"
-                    class="btn text-white bg-blue-600 hover:bg-blue-700 group transition-all duration-200 ease-in-out"
-                    aria-label="Browse latest jobs">
-                    Browse Latest Jobs 
-                    <span class="tracking-normal text-blue-300 group-hover:translate-x-0.5 
-                        transition-transform duration-150 ease-in-out ml-1">
-                        →
-                    </span>
-                </a>
+        </div>
+
+    </div>
+</section>
+
+
+<section>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="py-8 md:py-16 border-t">
+
+            <article class="max-w-sm mx-auto space-y-5 md:max-w-none md:flex md:items-center md:space-y-0 md:space-x-8 lg:space-x-16">
+          
+                <!-- Content -->
+                <div class="md:w-1/2 aos-init aos-animate" data-aos="fade-up">
+                    <header>
+                        <h2 class="h4 md:text-4xl lg:text-5xl  mb-3">
+                            <span class="text-black " >How Our AI Powers Smarter Hiring</span>
+                        </h2>
+                    </header>
+                    <p class="text-lg text-slate-500">Our AI analyzes video applications and CVs to identify top candidates based on skills, communication, and cultural fit. It automates screening, reduces recruiter workload, and ensures fairer hiring by focusing on qualifications, not just keywords. Recruiters get AI-driven insights while keeping full control over final decisions.
+
+                    </p>
+                    
+                </div>
+
+                      <!-- Image -->
+                      <a class="relative block group overflow-hidden md:w-1/2 aos-init aos-animate" href="blog-post.html" data-aos="fade-down">
+                        <img class="w-full aspect-16/9 md:aspect-27/17 object-cover group-hover:scale-105 transition duration-700 ease-out" src="./images/ai-smarter-hiring.jpg" width="540" height="340" alt="News 01">
+                       
+                    </a>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+
+<section class="relative">
+
+    <div class="absolute inset-0 bg-slate-100 pointer-events-none mb-64 md:mb-80" aria-hidden="true"></div>
+
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="py-8 md:py-16">
+
+            <!-- Section header -->
+            <div class="max-w-3xl mx-auto text-center pb-12">
+                <h2 class="h2 text-slate-800 mb-4">Streamline Your Recruitment with AI</h2>
+                <p class="text-xl text-slate-500">Experience seamless recruitment with YourCVVideo. Post jobs, receive video CVs, and screen candidates efficiently, saving time and hiring smarter.
+
+                </p>
+            </div>
+           
+
+            <!-- Section content -->
+            <div class="max-w-3xl mx-auto" x-data="{ tab: '1' }">
+
+                <!-- Tabs buttons -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 pb-12">
+
+                    {howItWorks.map((h=>( 
+                    <button 
+                    key={h.step}
+                    class="text-center "
+                    :class={`tab !== '${h.step}' ? 'opacity-50 hover:opacity-75': 'transition-opacity text-blue-600'`}
+                   
+                    @click={`tab = '${h.step}'`
+                    }>
+                        <div class="inline-flex  mb-3">
+                            <img src={h.icon} width="46" height="46" alt="">
+                        </div>
+                        <div class="md:text-lg leading-tight font-semibold "
+                        :class={`tab == '${h.step}' ? 'text-blue-600':'text-slate-800'`}
+                        >{h.title}</div>
+                    </button>)))}
+                  
+                </div>
+
+                <!-- Tab items -->
+                <div class="relative flex flex-col aos-init aos-animate" data-aos="fade-up">
+                    {howItWorks.map((h=>(   
+                         <div  x-show={`tab === '${h.step}'`} x-transition:enter="transition ease-in-out duration-700 order-first" x-transition:enter-start="opacity-0 -translate-y-16" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in-out duration-300 absolute" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-16" class="" style="display: none;">
+                            <p class="text-center pb-8 text-lg text-slate-800">{h.description}</p>
+                        <img class="mx-auto shadow-2xl" src={h.image} width="768" height="474" alt="Features home 01">
+                    </div>
+                    )))}
+                  
+                 
+                   
+                </div>
+
             </div>
 
         </div>
     </div>
-</Section>
+</section>
+
+
+<section class="bg-white">
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="py-12 md:py-20 border-t border-slate-200">
+
+            <!-- Section content -->
+            <div class="relative max-w-3xl mx-auto text-center">
+
+               
+                <!-- Section Heading and Description -->
+                <div class="relative">
+                    <h2 class="h2 font-playfair-display text-slate-800 mb-4">
+                        Human + Artificial Intelligence = Smarter Hiring
+                    </h2>
+                    <p class="text-xl text-slate-500 mb-8">
+                        We combine cutting-edge AI with the power of human insight, enhancing personal connections and making recruitment faster, fairer, and more effective.
+                    </p>
+
+                    <!-- Call to Action Buttons -->
+                    <div class="flex justify-center gap-6">
+                        <!-- For Recruiters -->
+                        <a class="btn text-white bg-blue-600 hover:bg-blue-700 group py-3 px-6  text-lg font-semibold transition duration-300 ease-in-out" href="/recruiters">
+                            Start Hiring Smarter
+                            <span class="tracking-normal text-blue-300 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">→</span>
+                        </a>
+
+                        <!-- For Candidates -->
+                        <a class="btn text-white bg-slate-700 hover:bg-slate-800" href="/candidates">
+                            Create Your CVVideo
+                            <span class="tracking-normal text-white group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">→</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="bg-slate-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="py-12 md:py-20">
+            <div class="max-w-3xl space-y-4 mx-auto text-center mb-8">
+                <h2 class="h2 text-slate-800">Expanding Across the Globe</h2>
+                <p class="text-lg text-slate-500">
+                    Our AI-driven recruitment solution is transforming hiring across the globe, helping businesses in multiple countries find top talent efficiently. Whether you're a recruiter in the UK, a hiring manager in Europe, or a job seeker in Asia, our platform streamlines the process, ensuring fair and data-driven hiring decisions—anytime, anywhere.
+                </p>
+            </div>
+
+            <div
+                class="flex flex-wrap items-center justify-center"
+                data-aos-id-clients=""
+            >
+            {countries.map((country=> 
+                ( <div
+                    class="ml-4 md:ml-4 aos-init aos-animate"
+                    data-aos="fade-up"
+                >
+                    <img width="80px" src={country.image} alt={country.name}>
+                </div>)
+            ))}
+               
+
+               
+            </div>
+           
+           <div class="text-center mt-6 text-sm text-slate-500">
+              <p>We are proud to serve recruiters and job seekers across the United Kingdom, South Africa, Australia, New Zealand, India, Pakistan, Singapore, Hong Kong, the United Arab Emirates, and 23 European countries, including major ones like Germany, France, Italy, Spain, and more. Join us as we continue to expand and transform the global hiring landscape.</p>
+           </div>
+            
+        </div>
+    </div>
+</section>
+
+
+<section class="">
+                <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+                    <div class="py-12 md:py-20">
+
+                        <div class="relative max-w-3xl mx-auto text-center">
+
+                            <div class="absolute right-0 -mt-4 -mr-1 fill-slate-300 hidden lg:block" aria-hidden="true">
+                                <svg class="fill-slate-300" width="56" height="43">
+                                    <path d="M4.532 30.45C15.785 23.25 24.457 12.204 29.766.199c.034-.074-.246-.247-.3-.186-4.227 5.033-9.298 9.282-14.372 13.162C10 17.07 4.919 20.61.21 24.639c-1.173 1.005 2.889 6.733 4.322 5.81M18.96 42.198c12.145-4.05 24.12-8.556 36.631-12.365.076-.024.025-.349-.055-.347-6.542.087-13.277.083-19.982.827-6.69.74-13.349 2.24-19.373 5.197-1.53.75 1.252 7.196 2.778 6.688"></path>
+                                </svg>
+                            </div>
+
+                            <div class="relative">
+                                <h2 class="h2 font-playfair-display text-slate-800 mb-4">Join the Recruitment Revolution Today!</h2>
+                                <p class="text-xl text-slate-500 mb-8">Take the next step in transforming hiring—whether you're a recruiter, employer, or job seeker, YourCVVideo is built to help you connect faster, smarter, and more effectively.</p>
+                                <div>
+                                    <a class="btn text-white bg-blue-600 hover:bg-blue-700 group" href="/login">
+                                        Get Started Now <span class="tracking-normal text-blue-300 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+</section>
+
+
+
+
+
