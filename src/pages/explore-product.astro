@@ -1,8 +1,352 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import SectionHeader from "../components/SectionHeader.astro";
+import FeaturedCTASection from "../components/Section/FeaturedCTASection.astro";
+import StepProcess from "../components/StepProcess.astro";
+import FeatureSection from "../components/Section/FeatureSection.astro";
+
+const pricingPlans = [
+  {
+    title: "Monthly Plan",
+    price: "£74.99 per user/month (excl. VAT)",
+    description: "Perfect for short-term use with flexible monthly billing.",
+    cta: "Get Started",
+    trial: "14-Days Free Trial",
+    icon: "./images/icon/monthly-icon.png", // Add the icon for the monthly plan
+    link: "/pricing" // Add the link for the monthly plan
+  },
+  {
+    title: "Annual Plan",
+    price: "£750 per user/year (excl. VAT)",
+    description: "Ideal for long-term commitments with a discount for yearly payment.",
+    cta: "Get Started",
+    trial: "14-Days Free Trial",
+    icon: "./images/icon/annual-icon.png", // Add the icon for the annual plan
+    link: "/pricing" // Add the link for the annual plan
+  },
+  {
+    title: "14-Days Free Trial",
+    price: "Free",
+    description: "Try all features with no cost for 14 days.",
+    cta: "Start Free Trial",
+    trial: "Free",
+    icon: "./images/icon/free-trial-icon.png", // Add the icon for the free trial
+    link: "/pricing" // Add the link for the free trial
+  }
+];
+
+
+
+const features = [
+  {
+    content: "Securely upload IDs, licenses, qualifications, and clearances. Candidates control who can access their documents.",
+  },
+  {
+    content: "Human - AI Synergy Powered candidate search scans online profiles, generates PDF summaries, and integrates with CVVideo.",
+  },
+  {
+    content: "Automated reference and verification checks with intelligent background screening technology.",
+  },
+  {
+    content: "Transparent ratings for recruiters and candidates to build trust and improve collaboration.",
+  },
+  {
+    content: "Effortlessly post vacancies across multiple job boards with our Vacancy Management System.",
+  },
+  {
+    content: "Host free virtual meetings for up to 100 participants through our built-in video conference feature.",
+  },
+  {
+    content: "AI transcribes all audio and video content, automatically logging details in the Candidate Tracking System.",
+  },
+];
+
+
+const image = {
+    src: './images/feature_coming_soon.jpeg',
+    width: 540,
+    height: 540,
+    alt: 'Target'
+}; 
+
+
+const currentFeatures = [
+{
+    c: 1,
+    icon:"./images/icon/video.png",
+    heading: "PreScreen Smarter",
+    content: "Use video to quickly filter top talent and reduce time spent on unsuitable CVs.",
+    main: 
+      {
+        title: "Video Screening Process",
+        content: "With the video pre-screening tool, you can reduce the time spent on reviewing CVs. Candidates are asked to submit video responses to key pre-screening questions, allowing you to assess their communication skills and suitability before diving into the detailed CV review.",
+      }
+    
+  },
+  {
+    c: 2,
+    icon:"./images/icon/post.png",
+    heading: "Post Freely",
+    content: "Unlimited job postings with recruiter video for more quality responses every time.",
+    main: 
+      {
+        title: "Job Posting Flexibility",
+        content: "Our platform allows you to post as many job openings as needed, with unlimited job listings for 30 days. You can also include a recruiter video alongside your job post, helping to attract the best candidates with a personal touch.",
+      }
+    
+  },
+  {
+    c: 3,
+    icon:"./images/icon/viewer.png",
+    heading: "See Candidates In Action",
+    content: "Let applicants showcase their skills through unlimited video applications.",
+    main: 
+      {
+        title: "Engage Through Video Applications",
+        content: "Candidates can record video responses directly to your job posting, allowing you to evaluate their communication skills and enthusiasm. This feature enables you to go beyond the CV and assess their personality and presentation in a way that text simply can't convey.",
+      }
+    
+  },
+  {
+    c: 4,
+    icon:"./images/icon/searching.png",
+    heading: "Discover Without Limits",
+    content: "Search and explore candidate CVVideos and profiles with no restrictions.",
+    main: 
+      {
+        title: "Unlimited Candidate Search",
+        content: "You have the freedom to search and view an unlimited number of candidate profiles and CVVideos. Our advanced filtering and search options allow you to find the right talent based on specific criteria, ensuring a perfect match for your vacancy.",
+      }
+    
+  },
+  {
+    c: 5,
+    icon:"./images/icon/schedule.png",
+    heading: "Schedule Effortlessly",
+    content: "Built-in diary tools let candidates book video or in-person interviews directly.",
+    main: 
+      {
+        title: "Seamless Interview Scheduling",
+        content: "Say goodbye to endless back-and-forth emails. With integrated online diary management, candidates can book video or in-person interviews directly with recruiters, making scheduling quick and hassle-free for both parties.",
+      }
+    
+  },
+  {
+    c: 6,
+    icon:"./images/icon/video-share.png",
+    heading: "Record & Share",
+    content: "Capture and share video interviews securely while protecting your candidate pipeline.",
+    main: 
+      {
+        title: "Secure Video Interview Storage",
+        content: "All recorded video interviews are securely stored and can be easily shared with hiring managers or team members. The platform ensures that only the necessary people have access, safeguarding candidate exclusivity and privacy.",
+      }
+    
+  },
+  {
+    c: 7,
+    icon:"./images/icon/clipboard-list-check.png",
+    heading: "Track Everything",
+    content: "Manage the recruitment journey end-to-end with a powerful tracking system.",
+    main: 
+      {
+        title: "Candidate Tracking System",
+        content: "From the initial screening stage to the job offer, track every step of the recruitment process. Our ATS (Applicant Tracking System) allows you to monitor candidate progress, store feedback, and manage interviews all in one place.",
+      }
+    
+  }
+];
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
+    <section class="relative py-18">
+
+        <!-- Dark background -->
+        <div class="absolute inset-0 bg-slate-900 pointer-events-none -z-10" aria-hidden="true"></div>
+ 
+            <div class="relative max-w-7xl mx-auto px-4  sm:px-6">
+      
+                <article class="max-w-sm mx-auto space-y-5 md:max-w-none md:flex md:items-center md:space-y-0 md:space-x-8 lg:space-x-16">
+                     <!-- Content -->
+                     <div class="md:w-1/2 aos-init aos-animate" data-aos="fade-up">
+                        <header>
+                            <h2 class="h2 md:text-4xl lg:text-5xl font-playfair-display mb-3">
+                                <a class="text-slate-100 hover:underline hover:decoration-blue-100" href="blog-post.html">Experience the Full Potential with a <span class="text-emerald-500">14-Day Free Trial</span> </a>
+                            </h2>
+                        </header>
+                        <p class="text-xl text-slate-400 mb-8">Try our 14-day free trial and experience how Human-AI Synergy streamlines recruitment, enhances candidate selection, and improves hiring decisions—no commitment, just value.</p>
+                        <button class="btn text-white bg-blue-600 hover:bg-blue-700 mr-4">Start Your Trial</button>
+                        <a href="/pricing" class="btn text-white ">Our Pricing <span class="tracking-normal text-blue-300 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span></a>
+                    </div>
+                    <!-- Image -->
+                    <span class="relative block group overflow-hidden md:w-1/2 aos-init aos-animate" data-aos="fade-down">
+                        <img class="w-full aspect-16/9 md:aspect-27/17 object-cover group-hover:scale-105 transition duration-700 ease-out" src="./images/blog-post-01.jpg" width="540" height="340" alt="News 01">
+                      
+                    </span>
+                   
+                </article>
+             
+
+            </div>
+       
+    </section>
+    <section class="realtive py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <SectionHeader
+            title="Streamline Recruitment with YourCVVideo"
+            desc="Organize top profiles, track performance, view audience metrics, and share influencers with your team. Human - AI Synergy Powered tools make influencer management seamless and efficient."
+        />
+
+        <div
+        class="max-w-xl mx-auto md:max-w-none flex flex-col md:flex-row md:items-start md:space-x-8 lg:space-x-16 xl:space-x-18 space-y-8 space-y-reverse md:space-y-0"
+        x-data="{ tab: '1' }"
+    >
+
+    <div class="md:w-7/12 lg:w-1/2 aos-init aos-animate" data-aos="fade-up">
+          
+        <!-- Tabs buttons -->
+        <div class="mb-8 md:mb-0">
+            {currentFeatures.map((feature:any) => (
+                 <button
+                           
+                           :class={`tab !== '${feature.c}' ? 'border-transparent ' : 'border-2 border-blue-500 '`}
+                           class="flex w-full items-start  text-left bg-white border-2 px-5 py-4  rounded-lg shadow-md transition duration-300 ease-in-out mb-3"
+                           @click={`tab = '${feature.c}'`}
+                       >
+                        <div class="flex items-center">
+                          <img src={feature.icon} class="mr-4" alt="" width="40" height="40">
+                           <div>
+                               <div class="text-lg text-slate-800 font-semibold">
+                                   {feature.heading}
+                               </div>
+                               {/* <div class="text-slate-500">{feature.content}</div> */}
+                           </div>
+                       </button>
+                    </div>
+            ))}
+        </div>
+    </div>
+        <!-- Tabs items (images) -->
+        <div
+            class=" md:w-5/12 lg:w-1/2 order-1 md:order-none aos-init aos-animate"
+            data-aos="fade-down"
+        >
+            <div class="relative flex flex-col">
+                {currentFeatures.map((feature:any) => (
+                    <div
+                     
+                        class="w-full"
+                        x-show={`tab === '${feature.c}'`}
+                        x-transition:enter="transition ease-in-out duration-700 transform order-first"
+                        x-transition:enter-start="opacity-0 -translate-y-16"
+                        x-transition:enter-end="opacity-100 translate-y-0"
+                        x-transition:leave="transition ease-in-out duration-300 transform absolute"
+                        x-transition:leave-start="opacity-100 translate-y-0"
+                        x-transition:leave-end="opacity-0 translate-y-16"
+                        class=""
+                    >
+                        <div class="shadow-md py-8 px-8 rounded-3xl">
+                            <h2 class="h4 mb-4">{feature.main.title}</h2>
+                            <p class="text-slate-500 text-lg">{feature.main.content}</p>
+                        </div>
+                     
+                     
+                    </div>
+                ))}
+            </div>
+        </div>
+
+        <!-- Content -->
+      
+    </div>
+
+    </section>
+
+    <section class="relative bg-slate-50 py-12">
+       <div class="max-w-7xl mx-auto px-4  sm:px-6">
+            <SectionHeader
+            title="Find the Right Plan to Enhance Your Recruitment Workflow"
+            desc="Choose the plan that best fits your recruitment needs. Whether you prefer the flexibility of our monthly subscription or the cost savings of an annual plan, we offer competitive pricing to help you streamline your hiring process."
+        />
+
+<div
+                class="max-w-sm mx-auto sm:max-w-none grid gap-12 sm:grid-cols-2 md:grid-cols-3 sm:gap-x-6 sm:gap-y-8 items-start "
+                data-aos-id-testimonials=""
+            >
+                <!-- 1st Testimonial -->
+
+                {
+                    pricingPlans.map((plan) => (
+                        <article
+                            class="   h-full flex flex-col bg-white p-6 shadow-xl aos-init aos-animate rounded-2xl"
+                            data-aos="fade-up"
+                            data-aos-anchor="[data-aos-id-testimonials]"
+                        >
+                            <div class="mb-4">
+                                <img
+                                    style="width:50px"
+                                    src={plan.icon}
+                                    alt=""
+                                />
+                            </div>
+                            <div class=" glow">
+                                <p class="text-blue-600 text-xl font-semibold block mb-2">
+                                    {plan.title}
+                                </p>
+                                <p class="text-slate-500 text-md  font-medium glow mb-4">
+                                    {plan.description}
+                                </p>
+                                
+                                <p class="text-emerald-500 font-semibold mb-4">
+                                    {plan.trial}
+                                </p>
+                                <p>
+                                    <a href={plan.link} class="tracking-normal font-semibold text-blue-600 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out">
+                                        {plan.cta} -&gt;
+                                    </a>
+                                </p>
+                            </div>
+                        </article>
+                    ))
+                }
+            </div>
+        </div>
+    </section>
+
+    <section class="realtive bg-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <SectionHeader
+            title="Unlock Post-Investment Success with Full-Solution Expansion"
+            desc="Empower your business growth after investment with our all-in-one expansion solutions—seamlessly scale operations, optimize processes, and drive impactful results with cutting-edge tools."
+        />
+         <!-- Section content -->
+       
+         <div class="max-w-xl mx-auto md:max-w-none flex flex-col md:flex-row md:items-center md:space-x-8 lg:space-x-16 xl:space-x-18 space-y-8 space-y-reverse md:space-y-0">
+              <!-- Image -->
+              <div class="md:w-5/12 lg:w-1/2 aos-init aos-animate" data-aos="fade-left">
+                <img class="mx-auto md:max-w-none" src={image.src} width={image.width} height={image.height} alt={image.alt} />
+            </div>
+            <!-- Content -->
+            <div class="md:w-7/12 lg:w-1/2 order-1 md:order-none aos-init aos-animate" data-aos="fade-right">
+                <h2 class="h4 mb-4">We will complete the final phases of development over the forthcoming months</h2>
+                <ul class="space-y-4 mt-2 px-4 list-disc ">
+                    {features.map(feature => (
+                        <li >
+                            
+                            <div class="text-slate-500 text-lg">
+                                {feature.content}
+                            </div>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </div>
+            
+    </section>
+
    
-  
+
 </Layout>
